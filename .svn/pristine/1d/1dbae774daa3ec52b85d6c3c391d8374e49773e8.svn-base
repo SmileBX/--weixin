@@ -1,0 +1,96 @@
+<!--pages/purchaseDetails/purchaseDetails.wxml-->
+<!-- 信息 -->
+<view class='page' id='{{skinStyle}}'>
+<view class='purchaseDetails'>
+  <view class='banner'> 
+    <image src="{{purchaseDetail.coupic}}" mode="aspectFill"></image>
+  </view>
+  <view class='purchInfo'>
+    <view class='shopTitle  '>
+      <text class='h2'>{{purchaseDetail.couname}}</text>
+    </view>
+    <view class='shopMap flexbox flexcenter'>
+      <text class='shopMtit flex'>有效期： {{purchaseDetail.effectdate}} 至  {{purchaseDetail.expirydate}}</text>
+      <view class='shopMicon'>
+        ￥<span class="price">{{purchaseDetail.couprice}}</span>
+      </view>
+    </view>
+    <view class='purchLable flexbox flexcenter'>
+      <view class='purchLimg flex'>
+        <!-- <image src='/images/label_icon05.png' class='label_icon05'></image>
+        <image src='/images/label_icon06.png' class='label_icon06'></image> -->
+        <text class='labelInfo{{skinStyle}}'><text class='label_icon1'>过期可退</text></text>
+        <text class='labelInfo{{skinStyle}}'><text class='label_icon1'>可退款</text></text>
+      </view>
+      <view class='purchLsell'>
+        已售  {{purchaseDetail.getnums}}
+      </view>
+    </view>  
+  </view>
+</view>
+<!-- 适用门店 -->
+<view class='purchase'>
+  <view class='shoptit flexbox flexcenter'>
+      <text class='h4 flex'>适用门店（{{purchaseDetail.shopnum}}）</text>
+      <view class='more' bindtap='shopList' data-id='{{purchaseDetail.couid}}'>
+        <text>查看全部</text>
+        <image src='/images/more_icon01.png' class='iconRight'></image>
+      </view>
+    </view>
+    <view class='purchaseInfo'>
+      <view class='purchaseAll'  bindtap='goDetail' data-id='{{item.id}}'>
+        <text class='h2' wx:if="{{purchaseDetail.shopname!=null}}">{{purchaseDetail.shopname}}</text>
+        <view class='purchaseDetail  flexbox flexcenter'>
+          <view class='flex'>
+            <text class='purchaseMap' bindtap="getMap"  data-lnglat='{{purchaseDetail.lng}},{{purchaseDetail.lat}}' data-sname='{{purchaseDetail.shopname}}' data-addr='{{purchaseDetail.address}}'>{{purchaseDetail.address}}</text>
+          </view>
+          <view class='shopMicon'>
+            <image src='/images/map_icon.png' class='map_icon dark' bindtap="getMap"  data-lnglat='{{purchaseDetail.lng}},{{purchaseDetail.lat}}' data-sname='{{purchaseDetail.shopname}}' data-addr='{{purchaseDetail.address}}'></image>
+            <image src='/images/map_icon1.png' class='map_icon pink' bindtap="getMap"  data-lnglat='{{purchaseDetail.lng}},{{purchaseDetail.lat}}' data-sname='{{purchaseDetail.shopname}}' data-addr='{{purchaseDetail.address}}'></image>
+            <image src='/images/map_icon2.png' class='map_icon yellow' bindtap="getMap"  data-lnglat='{{purchaseDetail.lng}},{{purchaseDetail.lat}}' data-sname='{{purchaseDetail.shopname}}' data-addr='{{purchaseDetail.address}}'></image>
+            <text></text>
+            <image src='/images/phone_icon.png' class='phone_icon dark' bindtap='phonecallevent' data-phone='{{purchaseDetail.phone}}'></image>
+             <image src='/images/phone_icon1.png' class='phone_icon pink' bindtap='phonecallevent' data-phone='{{purchaseDetail.phone}}'></image>
+              <image src='/images/phone_icon2.png' class='phone_icon yellow' bindtap='phonecallevent' data-phone='{{purchaseDetail.phone}}'></image>
+          </view>
+        </view>  
+      </view>
+    </view>
+</view>
+<!-- 使用说明 -->
+<view class='instructions'>
+  <view class='shoptit flexbox flexcenter'>
+      <text class='h4 flex'>使用说明</text>
+      <!-- <navigator class='more' url="">
+        <text>查看全部</text>
+        <image src='/images/more_icon01.png' class='iconRight'></image>
+      </navigator> -->
+    </view>
+    <view class='instructionsInfo'>
+      <text style="line-height: 46rpx;">{{purchaseDetail.cremark}}</text>
+    </view>
+</view>
+<!-- 商家介绍 -->
+<view class='merchant'>
+  <view class='shoptit'>
+    <view class='flexbox flexcenter'>
+      <text class='h4 flex'>商家介绍</text>
+      <!-- <navigator class='more' url="">
+        <text>查看全部</text>
+        <image src='/images/more_icon01.png' class='iconRight'></image>
+      </navigator> -->
+   </view> 
+    <view class='merchantInfo'>{{purchaseDetail.companyremark}}</view>
+  </view>
+  <view class='merchantDetail'>
+    <view class=''  wx:for='{{merchant}}' wx:key='{{index}}' bindtap='' data-id='{{item.id}}'>
+      <image class='merchantImg' src="{{item}}" mode="aspectFill"></image>
+    </view>
+  </view>
+</view>
+
+<view class='footer'>
+   <button class='fbtm' bindtap='goBuy'>￥{{purchaseDetail.couprice}}立即购买</button>
+</view>
+
+</view>

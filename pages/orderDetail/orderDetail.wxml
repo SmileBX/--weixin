@@ -1,0 +1,123 @@
+<view class='page' id='{{skinStyle}}'>
+<view wx:if="{{payInfo.tradetype==1}}">
+
+<view class='exheader'>
+   <image src='/images/paySuccess_icon.png' class='succ dark'></image>
+   <image src='/images/paySuccess_icon1.png' class='succ pink'></image>
+   <image src='/images/paySuccess_icon.png' class='succ yellow'></image>
+   <text class=''>支付成功</text>
+</view>
+
+<view class="conmain paddinglr">
+    <view class='cmbtn'>
+        <view class='flexbox cmlist'>
+            <view class=''>消费商家</view>
+            <view class='flex tright tbla'>{{payInfo.shopname}}</view>
+        </view>
+        <view class='flexbox cmlist'>
+            <view class='flex'>消费总金额</view>
+            <view class='flex tright tbla'>{{payInfo.usemoney}}元</view>
+        </view>
+        <view class='flexbox cmlist'>
+            <view class='flex'>使用优惠减免</view>
+            <view class='flex tright tbla'>-{{payInfo.firstfree}}元</view>
+        </view>
+        <view class='flexbox cmlist'>
+            <view class='flex'>使用优惠码</view>
+            <view class='flex tright tbla '>{{payInfo.discountcode}}</view>
+        </view>
+        <view class='flexbox cmlist'>
+            <view class='flex red'>实付金额</view>
+            <view class='flex tright tbla red'>{{payInfo.favoredmoney}}元</view>
+        </view>
+    </view>
+</view>
+
+
+<view class="conmain paddinglr">
+    <view class='cmbtn'>
+        <view class='flexbox cmlist'>
+            <view class=''>交易单号</view>
+            <view class='flex tright tbla'>{{payInfo.orderid}}</view>
+        </view>
+        <view class='flexbox cmlist'>
+            <view class='flex'>支付时间</view>
+            <view class='flex tright tbla'>{{payInfo.dealtime}}</view>
+        </view>
+        <view class='flexbox cmlist'>
+            <view class='flex'>手机号</view>
+            <view class='flex tright tbla'>{{payInfo.payuphone}}</view>
+        </view>
+        <view class='flexbox cmlist'>
+            <view class='flex'>备注</view>
+            <view class='flex tright tbla '>{{payInfo.remark}}</view>
+        </view>
+        <view class='flexbox cmlist'>
+            <view class='flex'>支付方式</view>
+            <view class='flex tright tbla'>{{payInfo.payname}}</view>
+        </view>
+    </view>
+</view>
+</view>
+
+<view wx:if="{{payInfo.tradetype==3}}">
+
+<view class='exheader'>
+   <image src='/images/paySuccess_icon.png' class='succ dark'></image>
+   <image src='/images/paySuccess_icon1.png' class='succ pink'></image>
+   <image src='/images/paySuccess_icon.png' class='succ yellow'></image>
+   <text class=''>退款成功</text>
+</view>
+
+<view class="conmain paddinglr">
+    <view class='cmbtn'>
+        <view class='flexbox cmlist'>
+            <view class=''>消费商家</view>
+            <view class='flex tright tbla'>{{payInfo.shopname}}</view>
+        </view>
+        <view class='flexbox cmlist'>
+            <view class='flex'>消费总金额</view>
+            <view class='flex tright tbla'>{{payInfo.usemoney}}元</view>
+        </view>
+        <view class='flexbox cmlist'>
+            <view class='flex'>使用优惠减免</view>
+            <view class='flex tright tbla'>-{{payInfo.firstfree}}元</view>
+        </view>
+        <view class='flexbox cmlist'>
+            <view class='flex'>使用优惠码</view>
+            <view class='flex tright tbla '>{{payInfo.discountcode}}</view>
+        </view>
+        <view class='flexbox cmlist'>
+            <view class='flex red'>退款金额</view>
+            <view class='flex tright tbla red'>{{payInfo.favoredmoney}}元</view>
+        </view>
+    </view>
+</view>
+
+
+<view class="conmain paddinglr">
+    <view class='cmbtn'>
+        <view class='flexbox cmlist'>
+            <view class=''>退款单号</view>
+            <view class='flex tright tbla'>{{payInfo.orderid}}</view>
+        </view>
+        <view class='flexbox cmlist'>
+            <view class='flex'>退款时间</view>
+            <view class='flex tright tbla'>{{payInfo.dealtime}}</view>
+        </view>
+        <view class='flexbox cmlist'>
+            <view class='flex'>手机号</view>
+            <view class='flex tright tbla'>{{payInfo.payuphone}}</view>
+        </view>
+        <view class='flexbox cmlist'>
+            <view class='flex'>备注</view>
+            <view class='flex tright tbla '>{{payInfo.remark}}</view>
+        </view>
+        <view class='flexbox cmlist'>
+            <view class='flex'>退款方式</view>
+            <view class='flex tright tbla'>原路返回</view>
+        </view>
+    </view>
+</view>
+</view>
+</view>

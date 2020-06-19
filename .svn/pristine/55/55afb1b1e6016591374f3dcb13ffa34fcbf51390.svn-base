@@ -1,0 +1,124 @@
+/* pages/discountCoupon/discountCoupon.wxss */
+page{
+  height: 100%;
+}
+.discountCoupon{
+  /* margin-top: 30rpx; */
+  padding:30rpx 20rpx 0 20rpx;
+}
+image{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.voucher{
+  position: relative;
+}
+.discountCo_img{
+ width: 710rpx;
+ height: 235rpx; 
+}
+
+.couponL{
+  position: absolute;
+  top: 30rpx;
+  left: 35rpx;
+  color: #fff;
+  width: 440rpx;
+}
+.couponR{
+  width: 200rpx;
+  position: absolute;
+  top: 40rpx;
+  right: 10rpx;
+  color: #fff;
+  text-align: center;
+}
+.couponName{
+  font-weight: bold;
+  font-size: 32rpx;
+  /* margin-bottom: 26rpx; */
+  height:60rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.couponPrice{
+  font-size: 50rpx;
+  font-weight: bold;
+}
+#couponPs{
+  font-size: 28rpx;
+  font-weight: normal;
+  margin-top: 16rpx;
+}
+.ticket{
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 16rpx;
+}
+.couponUse{
+  font-size: 28rpx;
+}
+.couponP{
+  font-size: 50rpx;
+  font-weight: bold;
+}
+.discountIco{
+  font-size: 26rpx;
+}
+.couponTime{
+  position: absolute;
+  left: 35rpx;
+  bottom: 28rpx;
+  font-size: 24rpx;
+  color: #999999;
+}
+.voucher{
+  /* background: #333; */
+  margin-bottom: 24rpx;
+}
+.voucher button.couponU{
+  position: absolute;
+  right: 35rpx;
+  bottom: 26rpx;
+  background: #FEBB45;
+  color: #fff;
+  width: 130rpx;
+  height: 38rpx;
+  display: inline-block;
+  line-height: 38rpx;
+  font-size: 24rpx;
+}
+.sumPrice{
+  border-radius: 10rpx;
+  width: 100%;
+  background:#FEBB45;
+  padding:25rpx 0;
+  text-align: center;
+  font-size:34rpx;
+  color:#fff;
+}
+.footer{
+  padding: 0 20rpx;
+  margin-top: 94rpx;
+}
+
+/*美容没发 */
+#pink { width: 100%; background-color: #f6f6f6;height: 100%;}
+#pink .discountCoupon{background-color: #f6f6f6;}
+#pagespink{width: 100%; background-color: #f6f6f6;height: 100%;}
+/*早教 */
+#yellow { width: 100%; background-color: #f6f6f6;height: 100%;}
+#yellow .discountCoupon{background-color: #f6f6f6;}
+#pagesyellow{width: 100%; background-color: #f6f6f6;height: 100%;}
+
+
+/*健身 */
+#dark { width: 100%; background-color: #242424;height: 100%;}
+#dark .discountCoupon{background-color: #242424;}
+#pagesdark{width: 100%; background-color: #242424;height: 100%;}
+

@@ -1,0 +1,108 @@
+.groupon{
+  font-size:0;
+}
+.grouimg{
+  width:100%;
+  height:330rpx;
+}
+.grouDetail{
+  background:#fff;
+  padding:30rpx;
+  border-bottom:1rpx solid #efefef;
+
+}
+.name{
+  color: #313131;
+  font-size:34rpx;
+  text-shadow: 0 0 0;
+  
+}
+.time{
+  color: #ccc;
+  font-size:28rpx;
+  margin-top: 10rpx;
+  border-bottom:1rpx solid #efefef;
+  padding-bottom:30rpx;
+}
+.other{
+  position: relative;
+  height: 150rpx;
+  line-height: 150rpx;
+}
+.bank{
+  background-color: #ff6c00;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 50rpx;
+  padding: 10rpx 20rpx;
+  margin-left: 40rpx;
+  font-size:28rpx;
+}
+.strong{
+  font-size:38rpx;
+  font-weight: bold;
+}
+.des{
+  height: 100rpx;
+}
+.desitem{
+  text-align: center;
+  position: relative;
+}
+.destext{
+  display:inline-block;
+  vertical-align: middle;
+  font-size:28rpx;
+  margin-left:5rpx;
+  
+}
+.desitem:not(:last-child)::after{
+  content: "";
+  display: block;
+  width:0;
+  border-right:1rpx solid #ccc;
+  height: 23rpx;
+  position: absolute;
+  right:0;
+  top:16rpx;
+}
+.icon{
+  display:inline-block;
+  vertical-align: middle;
+}
+
+.rule{
+  padding-bottom:160rpx;
+}
+.title{
+  margin-top:20rpx;
+  padding:20rpx 0;
+  text-shadow: 0 0 0;
+  font-size:32rpx;
+}
+.textarea{
+  width:100%;
+  padding-bottom: 10rpx;
+}
+.footer{
+  display: -webkit-box;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border-top: 1px solid #e8e8e8;
+  height: 150rpx;
+  z-index: 10000;
+}
+.fbtm{
+  background-color: #febb45;
+  color: #fff;
+  border-radius: 50rpx;
+  width: 70%;
+  margin:28rpx auto;
+  line-height: 96rpx;
+  display: block;
+  -webkit-box-flex: 1;
+}

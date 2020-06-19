@@ -1,0 +1,43 @@
+<!--pages/serve/serve.wxml-->
+<view class='page' id='{{skinStyle}}'>
+<view class='serveAll'>
+  <view wx:for="{{serveAll}}" wx:key="serveId" data-id="{{item.goodsid}}" bindtap='goodDetail' data-item="item" wx:for-index="idx">
+
+    <view wx:if="{{idx%2==0}}">
+      <view class="serveInfo">
+        <image class="serve_background" src="{{item.logos}}" mode="aspectFill" ></image>
+          <view class='serveDetail' >
+            <view class='serveTit'>{{item.name}}</view>
+            <view class='servePrice'>
+                <text class='discountPrice' wx:if="{{item.prices!=null}}">￥{{item.prices}}</text> 
+                <text wx:else></text>   
+                <text class='originalPrice' wx:if="{{item.oldprice!=null}}">￥{{item.oldprice}}</text>
+                <text wx:else></text>
+            </view> 
+              <view class='serveIntro'>{{item.companyremark}}</view>
+          </view>
+      </view>
+    </view>
+
+      <view wx:else >
+        <view class='serveInfo' >
+          <image class="serve_background" src="{{item.logos}}" mode="aspectFill"></image>
+          <view class='serveDe' >
+            <view class='serveTit'>{{item.name}} </view>
+            <view class='servePrice'>
+              <text class='discountPrice' wx:if="{{item.prices!=null}}">￥{{item.prices}}</text>    
+              <text class='originalPrice' wx:if="{{item.oldprice!=null}}">￥{{item.oldprice}}</text>
+            </view> 
+            <view class='serveIntro'>{{item.companyremark}}</view>
+          </view>
+        </view>
+    </view>
+
+
+
+  </view>
+</view>
+</view>
+
+
+

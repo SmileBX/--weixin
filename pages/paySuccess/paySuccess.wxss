@@ -1,0 +1,30 @@
+.orderDt{
+  background:#fff;
+  color:#333;
+}
+.h4{
+  font-size: 32rpx;
+  padding:20rpx 35rpx;
+  border-bottom: 1rpx solid #ddd;
+  margin-bottom: 25rpx;
+}
+.block{
+  padding:0 35rpx;
+  height: 50rpx;
+ 
+}
+.ter{
+  text-align: right;
+}
+.red{
+  color: red;
+}
+.orderOr{
+  color:#8d8d8d;
+  border-top:1rpx solid #ddd;
+  margin:25rpx;
+  padding: 35rpx 0;
+}
+.blockor{
+  padding:0;
+}

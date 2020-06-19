@@ -1,0 +1,53 @@
+<!--pages/discountCoupon/discountCoupon.wxml-->
+<view class="page {{pagedata? '':'hide'}}" id='{{skinStyle}}'>
+<view class='discountCoupon'>
+  <view wx:for="{{discountCoupon}}">
+
+    <view class='voucher'>
+      <image src='/images/discountCo_img01.png' wx:if="{{item.coutype==4}}" class='discountCo_img'></image>
+      <image src='/images/discountCo_img02.png' wx:if="{{item.coutype==1}}" class='discountCo_img'></image>
+      <image src='/images/discountCo_img03.png' wx:if="{{item.coutype==2}}" class='discountCo_img'></image>
+      <view class='couponVos'>
+        <view class='couponInfo '>
+          <view class='couponL '>
+            <view class='couponName'>{{item.couname}}</view>
+            <view  wx:if="{{item.coutype==1}}" class='couponPrice'><text class='discountIco'>￥</text>{{item.couamount}}</view>
+            <view  wx:if="{{item.coutype==2}}" class='couponP'>{{item.discountrate}}<text class='discountIco'>折</text></view>
+            <view  wx:if="{{item.coutype==4}}" class='couponP ' id='couponPs'>{{item.giftname}}</view>
+          </view>
+          <view class='couponR'>
+            <view  wx:if="{{item.coutype==4}}" class='ticket'>兑换券</view>
+            <view  wx:if="{{item.coutype==1}}" class='ticket'>代金券</view>
+            <view  wx:if="{{item.coutype==2}}" class='ticket'>折扣券</view>
+            <text wx:if="{{item.coutype==1}}" class='couponUse'>{{item.mincost}}</text>
+            <text wx:if="{{item.coutype==2}}" class='couponUse'>{{item.mincost}}</text>
+            <text wx:if="{{item.coutype==4}}" class='couponUse'>{{item.mincost}}</text>
+          </view>
+        </view>
+        <view class='couponUse flexbox flexcenter'>
+          <text class='flex' class='couponTime'>有效期截止：{{item.effectdate}}至{{item.expirydate}}</text>
+          <button  class="couponU" data-couname="{{item.couname}}"  data-ticketType="{{item.ticketType}}"   data-ticketIds="{{item.ticketIds}}" bindtap='toUse' wx:if="{{item.coutype==1}}" data-ucid='{{item.ucid}}' data-isvalid="{{item.isvalid}}" data-isable="{{item.isable}}" data-couid="{{item.couid}}">使用</button>
+            <button  class="couponU"  data-couname="{{item.couname}}"  data-ticketType="{{item.ticketType}}"   data-ticketIds="{{item.ticketIds}}" bindtap='toUse' wx:if="{{item.coutype==2}}" data-ucid='{{item.ucid}}' data-isvalid="{{item.isvalid}}" data-isable="{{item.isable}}" data-couid="{{item.couid}}">使用</button>
+              <button  class="couponU"  data-couname="{{item.couname}}"  data-ticketType="{{item.ticketType}}"   data-ticketIds="{{item.ticketIds}}"  data-coutype="{{item.coutype}}" bindtap='toUse' wx:if="{{item.coutype==4}}" data-ucid='{{item.ucid}}' data-isvalid="{{item.isvalid}}" data-isable="{{item.isable}}" data-couid="{{item.couid}}">使用</button>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  <!-- <view  class='footer'> 
+    <view class='sumPrice' bindtap='toUse'>确认选择</view>
+    <view class='sumPrice' bindtap='toUse'  wx:if="{{item.coutype==2}}">确认选择</view>
+    <view class='sumPrice' bindtap='toUse'  wx:if="{{item.coutype==3}}">确认选择</view>
+  </view>  -->
+
+  <view class='dataOver {{ishide? "":"hide"}}'>{{statetip}}</view>
+</view>
+
+
+
+</view>
+
+<view class="page {{pagedata? 'hide':''}}" id='pages{{skinStyle}}'>
+<image class="nodata {{nodata? 'hide':''}}" src="/images/noData.png"></image>
+</view>

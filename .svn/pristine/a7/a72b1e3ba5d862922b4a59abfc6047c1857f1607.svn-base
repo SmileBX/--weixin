@@ -1,0 +1,33 @@
+<view class='page' id='{{skinStyle}}'>
+<view class="conmainspc paddinglr">
+    <view class='orange'>申请退款后将无法取消操作，请谨慎操作！</view>
+    <view class='cmtopspc flexbox' wx:for="{{orderLog}}" wx:key="order">
+        <view class='flex'>{{item.couname}}: {{item.orderid}}</view>
+    </view>
+</view>
+
+<view class="conmain paddinglr ">
+    <view class='origin flexbox' wx:for="{{orderLog}}" wx:key="order">
+        <view class='flex red'>退款总额：{{item.realamount}}元</view>
+        <view class='flex tright'>将退回您的支付账号</view>
+    </view>
+</view>
+
+<view class="conmain paddinglr">
+    <view class='cmtop flexbox'>
+        <view class='flex'>退款原因（至少选择一项,最多选三项）</view>
+    </view>
+    <view class='cmbtn'>
+        <checkbox-group bindchange="checkboxChange">
+          <label class="checkbox" wx:for="{{items}}" wx:key="items" data-name="{{item.name}}">
+            <checkbox value="{{item.value}},{{item.name}}" class="check fal" name="" checked="{{item.checked}}"/>
+            {{item.value}}
+          </label>
+        </checkbox-group>
+    </view>
+</view>
+
+<view class='btnbox paddinglr'>
+   <button class='btn-common btncon' type='default' bindtap='refund' >确定取消订单</button>
+</view>
+</view>

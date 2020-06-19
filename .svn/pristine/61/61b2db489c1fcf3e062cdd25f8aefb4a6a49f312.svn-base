@@ -1,0 +1,174 @@
+/* pages/serveDetails/serveDetails.wxss */
+.banner{
+  width: 100%;
+  height: 100%;
+}
+.banner image{
+  width: 100%;
+  height: 360rpx;
+}
+.serveInfo{
+  margin-top: -10rpx;
+  background: #333;
+  padding: 20rpx 20rpx 30rpx 20rpx;
+}
+.serveInfo .h2{
+  font-size: 34rpx;
+  color: #fff;
+  font-weight: bold;
+}
+.price{
+  font-size: 24rpx;
+}
+.discountPrice{
+  color: #FF3939;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-right: 20rpx;
+}
+.discountPrice .disicon{
+  font-size: 24rpx;
+  font-weight: normal;
+}
+.originalPrice{
+  font-size: 24rpx;
+  color: #999999;
+  text-decoration:line-through ;
+}
+.serveInfo .serveIntro{
+  font-size: 28rpx;
+  color: #C2C2C2;
+}
+.browse{
+  background: #333;
+  margin-top: 20rpx;
+}
+.servecon{
+  margin-top: 20rpx;
+}
+.servecon .tit{
+  width: 100%;
+  text-align: center;
+}
+.servecon .tit image{
+  width: 386rpx;
+  height: 26rpx;
+  margin-bottom: 30rpx;
+}
+.serveconImg{
+  text-align: center;
+}
+.serveconImg .img{
+  width: 710rpx;
+  height: 400rpx;
+  margin-bottom: 40rpx;
+}
+/* 导航 */
+.navs{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction:flow;
+  /* justify-content: space-around; */
+  background-color: white;
+  /* padding-top: 20rpx */
+
+
+}
+
+.navs image{
+  display: inline-block;
+  width: 76rpx;
+  height: 76rpx;
+}
+.nav_text{
+  font-size: 32rpx;
+  color: #fff;
+  font-weight: bold;
+}
+.navs .home{
+  background: #F6B64E;
+}
+.navs .call{
+  background: #FB9070;
+}
+.navs .like{
+  background: #333333;
+}
+.navs .like .nav_text{
+  color: #FB7070;
+}
+.browseInfo{
+  padding: 20rpx 20rpx;
+}
+
+.browseCon image{
+  width: 26rpx;
+  height: 20rpx;
+}
+.browseCon text{
+  font-size: 24rpx;
+  color: #C2C2C2;
+  margin-left: 10rpx;
+}
+.linkeDetail image{
+  width: 28rpx;
+  height: 24rpx;
+}
+.linkeDetail text{
+  font-size: 24rpx;
+  color: #C2C2C2;
+  margin-left: 10rpx;
+}
+.likeCon{
+  margin-top: 10rpx;
+  background: #4C443A;
+  padding: 10rpx 16rpx;
+}
+.noLinke_icon{
+  width: 30rpx;
+  height: 24rpx;
+  margin-right: 8rpx;
+}
+.likeUserinfo image{
+  width: 46rpx;
+  height: 46rpx;
+  border-radius: 50%;
+  margin: 0 10rpx;
+}
+.nav_ntext{color: #C2C2C2;}
+/*美容没发 */
+#pink { width: 100%; background-color: #f6f6f6;height: 100%;}
+#pink .serveInfo{background: #fff;}
+#pink .serveInfo .h2{color: #4D4D4D;} 
+#pink .serveInfo .serveIntro {color: #999;}
+#pink .browse{background: #fff;}
+#pink .browseCon text{color: #666666;}
+#pink .linkeDetail text {color: #666666;}
+#pink .servecon .tit .dark{display: none;}
+#pink .servecon .tit .yellow{display: none;}
+#pink .likeCon{background: #F3F3F6;}
+#pink .navs .like{background: #fff;}
+#pink .navs {border-top: 1px solid #CCCCCC;}
+#pink .nav_ntext{color: #999;}
+
+/*早教 */
+#yellow { width: 100%; background-color: #f6f6f6;height: 100%;}
+#yellow .serveInfo{background: #fff;}
+#yellow .serveInfo .h2{color: #4D4D4D;} 
+#yellow .serveInfo .serveIntro {color: #999;}
+#yellow .browse{background: #fff;}
+#yellow .browseCon text{color: #666666;}
+#yellow .linkeDetail text {color: #666666;}
+#yellow .servecon .tit .dark{display: none;}
+#yellow .servecon .tit .pink{display: none;}
+#yellow .likeCon{background: #F3F3F6;}
+#yellow .navs .like{background: #fff;}
+#yellow .navs {border-top: 1px solid #CCCCCC;}
+#yellow .nav_ntext{color: #999;}
+
+/* 健身 */
+#dark { width: 100%; background-color: #242424;height: 100%;}
+#dark .servecon .tit .yellow{display: none;}
+#dark .servecon .tit .pink{display: none;}

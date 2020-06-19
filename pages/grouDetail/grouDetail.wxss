@@ -1,0 +1,126 @@
+.conheader{
+  background:#333;
+  padding-top:48rpx;
+  box-sizing: border-box;
+}
+.chtop{
+  height: 183rpx;
+  border-bottom:1rpx solid #242424;
+}
+.chbox{
+  width: 176rpx;
+  position: relative;
+}
+.chimg{
+  width: 155rpx;
+  height: 108rpx;
+}
+.icont{
+  display: block;
+  width: 38rpx;
+  height: 38rpx;
+  text-align: center;
+  line-height: 38rpx;
+  font-size: 28rpx;
+  color:#fff;
+  background:#febb45;
+  position: absolute;
+  left:0;
+  top:0;
+}
+.chname{
+  color:#fff;
+  display: block;
+  height: 75rpx;
+  line-height: 32rpx;
+  margin-top:-3rpx;
+  font-size: 32rpx;
+}
+.chtime{
+  color:#C2C2C2;
+  display: block;
+  font-size: 28rpx;
+}
+.chamount{
+  color:#C2C2C2;
+  display: block;
+  font-size: 28rpx;
+}
+.chbtn{
+  color:#EDAC10;
+  padding: 25rpx 0;
+}
+.conmain{
+  background: #333;
+  margin-top: 20rpx;
+  padding-bottom: 20rpx;
+  font-size: 28rpx;
+}
+.cmtop{
+  padding: 40rpx 0 30rpx 0;
+  color: #C2C2C2;
+  border-bottom: 1rpx solid #242424;
+  margin-bottom: 20rpx;
+}
+.cmbtn{
+  padding: 8rpx 0;
+  color: #C2C2C2;
+}
+.tright{
+  text-align:right;
+}
+.cmlist{
+  line-height: 50rpx;
+}
+.orange{
+  color:orange;
+}
+.tbla{
+  color:#C2C2C2;
+}
+.red{
+  color:#ff3939;
+}
+.conmaind{
+  padding-bottom: 50rpx;
+}
+
+/*美容没发 */
+#pink { width: 100%; background-color: #f6f6f6;height: 100%;}
+#pink .conheader {background: #fff;}
+#pink .chname{color: #212121;}
+#pink .chtime{color: #A7A7A7;}
+#pink .chamount{color: #92969C;}
+#pink .chbtn {color: #747474;}
+#pink .chtop{border-bottom: 1px solid #DADADA;}
+#pink .conmain {background: #fff;}
+#pink .cmtop{color: #919191;border-bottom: 1px solid #DADADA;}
+#pink .cmbtn {color: #4D4D4D;}
+#pink .orange{color: #959595;}
+#pink .conmain  {background: #fff;}
+#pink .cmtop {color: #989CA2;border-bottom: 1px solid #DADADA;}
+#pink .cmbtn{color: #989CA2;}
+#pink .tbla {color: #545454;}
+#pink .red{color: #FF3939;}
+
+/*早教 */
+#yellow { width: 100%; background-color: #f6f6f6;height: 100%;}
+#yellow .conheader {background: #fff;}
+#yellow .chname{color: #212121;}
+#yellow .chtime{color: #A7A7A7;}
+#yellow .chamount{color: #92969C;}
+#yellow .chbtn {color: #747474;}
+#yellow .chtop{border-bottom: 1px solid #DADADA;}
+#yellow .conmain {background: #fff;}
+#yellow .cmtop{color: #919191;border-bottom: 1px solid #DADADA;}
+#yellow .cmbtn {color: #4D4D4D;}
+#yellow .orange{color: #959595;}
+#yellow .conmain  {background: #fff;}
+#yellow .cmtop {color: #989CA2;border-bottom: 1px solid #DADADA;}
+#yellow .cmbtn{color: #989CA2;}
+#yellow .tbla {color: #545454;}
+#yellow .red{color: #FF3939;}
+
+/*健身 */
+#dark { width: 100%; background-color: #242424;height: 100%;}
+ 

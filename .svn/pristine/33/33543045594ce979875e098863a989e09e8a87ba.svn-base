@@ -1,0 +1,67 @@
+.exheader{
+  text-align: center;
+  font-weight: bold;
+  font-size: 34rpx;
+  color:#EDAC10;
+  padding: 38rpx 0 18rpx 0;
+}
+.succ{
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+  margin-right: 24rpx;
+}
+.conmain{
+  background: #333;
+  margin-top: 20rpx;
+}
+.cmtop{
+  padding: 40rpx 0 30rpx 0;
+  color: #94989e;
+  border-bottom: 1rpx solid #d9d9d9;
+}
+.cmbtn{
+  padding: 35rpx 0;
+  color: #FFFFFF;
+}
+.tright{
+  text-align:right;
+}
+.cmlist{
+  line-height: 56rpx;
+}
+.orange{
+  color:#febb45;
+}
+.tbla{
+  color:#C2C2C2;
+}
+.red{
+  color:#ff3939;
+}
+
+/*美容没发 */
+#pink { width: 100%; background-color: #f6f6f6;height: 100%;}
+#pink .conmain {background: #fff;}
+#pink .cmbtn{color: #989CA2;}
+#pink .tbla {color: #545454;}
+#pink .red {color: #FF3939;}
+#pink .exheader{color: #fe4646;}
+#pink .exheader .dark{display: none;}
+#pink .exheader .yellow{display: none;}
+
+/*早教 */
+#yellow { width: 100%; background-color: #f6f6f6;height: 100%;}
+#yellow .conmain {background: #fff;}
+#yellow .cmbtn{color: #989CA2;}
+#yellow .tbla {color: #545454;}
+#yellow .red {color: #FF3939;}
+#yellow .exheader{color: #EDAC10;}
+#yellow .exheader .dark{display: none;}
+#yellow .exheader .pink{display: none;}
+
+/* 健身 */
+#dark { width: 100%; background-color: #242424;height: 100%;}
+#dark .exheader .yellow{display: none;}
+#dark .exheader .pink{display: none;}

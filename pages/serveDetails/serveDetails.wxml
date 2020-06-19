@@ -1,0 +1,111 @@
+<!--pages/serveDetails/serveDetails.wxml-->
+<view class='page' id='{{skinStyle}}'>
+<view class='serveDetails'>
+  <view class='banner'> 
+    <image src="{{serveDetails.logos}}" mode="aspectFill"></image>
+  </view>
+  <view class='serveInfo'>
+    <text class='h2'>{{serveDetails.name}}</text>
+    <view class='price'>
+      <text class='discountPrice' wx:if="{{serveDetails.prices!=null}}"><text class='disicon' >￥</text>{{serveDetails.prices}}</text>    
+      <text class='originalPrice' wx:if="{{serveDetails.oldprice!=null}}"><text class='oricon' >￥</text>{{serveDetails.oldprice}}</text>
+    </view>
+    <view class='serveIntro'>{{serveDetails.companyremark}}</view> 
+  </view>
+</view>
+<view class='browse'>
+<!-- 浏览量 -->
+  <view class='browseInfo' wx:if="{{ collection}}">
+    <view class='browseDetail flexbox flexcenter'>
+      <view class='browseCon flex'>
+        <image src='/images/browse_icon.png'></image>
+        <text class=''>浏览{{serveDetails.browseCon}}次</text>
+      </view>
+      <view class='linkeDetail' bindtap="toCollect">
+        <image src='/images/praise_icon.png'></image>
+        <text>{{serveDetails.linkeDetail}}赞</text>
+      </view>
+    </view>
+    <view class="  {{nodata? 'hide':''}}" >
+    <view class="likeCon  {{nodata? 'hide':''}}" >
+      <view class='likeCenter flexbox flexcenter' >
+        <image src='/images/noLinke_icon.png' class='noLinke_icon' mode="aspectFill"></image>
+        <view class='likeUserinfo flex'>
+            <!-- <image bindtap="bindViewTap" class="userAvatarUrl" src="{{avatarUrl}}" background-size="cover"></image> -->
+        </view>
+      </view>
+    </view>
+    </view>
+    <!-- <view class="nodata  {{nodata? '':'hide'}}"></view> -->
+  </view>
+
+  <view wx:else class='browseInfo'>
+    <view class='browseDetail flexbox flexcenter'>
+      <view class='browseCon flex'>
+        <image src='/images/browse_icon.png'></image>
+        <text class=''>浏览{{likelis.viewnums}}次</text>
+      </view>
+      <view class='linkeDetail' bindtap="toCollect">
+      <image src='/images/praise_icon.png'  wx:if="{{likelis.islike==2}}"></image>
+        <image src='/images/praise_ic.png' wx:else></image>
+        <text>{{likelis.likenums}}  赞</text>
+      </view>
+    </view>
+
+    <view class="  {{nodata? 'hide':''}}" >
+    <view class="likeCon "  >
+      <view class='likeCenter flexbox flexcenter' >
+        <image src='/images/noLinke_icon.png' class='noLinke_icon'></image>
+        <view class='likeUserinfo '  wx:for="{{likelist}}">
+            <image  class="userAvatarUrl" src="{{item.picurl}}" background-size="cover"></image>
+        </view>
+      </view>
+    </view>
+    </view>
+    <!-- <view class="nodata  {{nodata? '':'hide'}}"></view> -->
+  </view>
+
+
+
+<!-- <button  wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 点击授权登录 </button>
+          <block wx:else>
+            <image bindtap="bindViewTap" class="userAvatarUrl" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+            <text class="userNickName">{{userInfo.nickName}}</text>
+          </block> -->
+
+
+  <!-- 服务详情 -->
+  <view class='servecon'>
+    <view class='tit'>
+      <image src='/images/servecon_tit.png' mode="aspectFill" class='dark'></image>
+      <image src='/images/servecon_tit1.png' mode="aspectFill" class='pink'></image>
+      <image src='/images/servecon_tit2.png' mode="aspectFill" class='yellow'></image>
+    </view>
+   <view class='serveconImg'  wx:for='{{picAll}}' wx:key='{{index}}' bindtap='' data-id='{{item.id}}'>
+      <image class='img' src="{{item}}" mode="aspectFill"></image>
+    </view>
+  </view>
+</view>
+  <view class="navs">
+    <view style='flex:1;'>
+      <view class='home flexbox flexcenter'  bindtap='home'>
+        <image src='../../images/serve_nav01.png'></image>
+        <view  class='flex nav_text'>首页</view>
+      </view>
+    </view>
+    <view style='flex:1;'>
+      <view class='call flexbox flexcenter' bindtap='call'  data-id="{{serveDetails.phone}}">
+        <image src='../../images/serve_nav02.png'  ></image>
+        <view  class='flex nav_text'>联系商家</view>
+      </view>
+    </view>
+    <view style='flex:1;'>
+      <view class='like flexbox flexcenter'  bindtap="toCollect">
+         <image src='../../images/serve_nav04.png' wx:if="{{likelis.islike==2}}"></image>
+        <image src='../../images/serve_nav03.png' wx:else></image>
+        <view   class='flex nav_ntext ' wx:if="{{likelis.islike==2}}" >点赞</view>
+        <view   class='flex nav_text' wx:else>已赞</view>
+      </view>
+    </view>
+</view>
+</view>

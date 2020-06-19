@@ -1,0 +1,75 @@
+.header{
+  background:#F1C40F;
+  border-bottom: 1rpx solid #efefef;
+  height:228rpx;
+  text-align: center;
+}
+.logo{
+  width: 112rpx;
+  height: 112rpx;
+  border-radius: 50%;
+  margin-top:32rpx;
+}
+.logoname{
+  display: block;
+  font-size:32rpx;
+  color:#fff;
+}
+.main{
+ position:relative;
+  background: #fff;
+  margin-top:20rpx;
+  border-top:1rpx solid #efefef;
+  border-bottom:1rpx solid #efefef;
+  font-size:30rpx;
+  color: #545454;
+}
+.li {
+  /* height: 120rpx; */
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid #efefef;
+}
+.li:last-child{
+  border:none;
+}
+.kk{
+  display: inline-block;
+  margin:0 30rpx;
+}
+.left{
+  width: 150rpx;
+  text-align: right;
+}
+.phone{
+  width: 136rpx;
+  height: 64rpx;
+  text-align: center;
+  border-left:1rpx solid #d8d8d8;
+}
+.tel{
+  display: inline-block;
+  width:41rpx;
+  height: 41rpx;
+  vertical-align: middle;
+  margin-top:11rpx;
+}
+.telnum{
+  display: inline-block;
+  vertical-align: middle;
+}
+.addr{
+  line-height: 31rpx;
+}
+.shopimg{
+    position:absolutely;
+    width:100%;
+    overflow:hidden;
+}
+.img{
+    width:280rpx;
+    height:180rpx
+}
+.hover-img{
+    width:340rpx;
+    height:200rpx;
+}

@@ -1,0 +1,140 @@
+<view class="page {{pagedata? '':'hide'}}" id='{{skinStyle}}'>
+  <view class="header flexbox flexcenter">
+    <block wx:for="{{titles}}" wx:key="{{titlesId}}" class="item">
+      <view class='flex li {{item.act==active? "active":""}}' data-act="{{item.act}}" bindtap='chooseAct'>{{item.orderName}}</view>
+    </block>
+  </view>
+
+  <view class="orderList {{nodata? 'hide':''}}">
+    <view wx:for="{{orderlog}}" wx:key="{{orderlogId}}" wx:key="{{index}}" class="item">
+      <!--优惠买单订单-->
+
+      <view class='payblock paddinglr' wx:if="{{item.isTrade=='true'}}" bindtap='linkPayDetail' data-id="{{item.id}}" mode="widthFix">
+        <view class='pbtop flexbox flexcenter'>
+          <!-- <image src='/images/default.png' class='pbimg' wx:if="{{item.coupic=='/static/images/business/xianjin.png'}}"></image> -->
+          <image src='{{item.coupic}}' class='pbimg'></image>
+          <text class='pbname flex'>{{item.shopname}}（优惠买单）</text>
+          <text class='pbstate'>{{item.payname}}</text>
+        </view>
+        <view class='pbbtn flexbox'>
+          <view class='ptlet'>
+            <text class='pbtexts'>消费日期：</text>
+            <text class='pbtexts'>消费金额：</text>
+            <text class='pbtexts'>优惠金额：</text>
+            <text class='pbtexts'>实付金额：</text>
+          </view>
+          <view class='ptrit flex'>
+            <text class='pbtext'>{{item.dealtime}}</text>
+            <text class='pbtext'>{{item.usemoney}}元</text>
+            <text class='pbtext'>{{item.firstfree}}元</text>
+            <text class='pbtext weight'>{{item.favoredmoney}}元</text>
+          </view>
+        </view>
+      </view>
+
+      <!--优惠买单订单//-->
+      <view bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}" style="{{item.txtStyle}}" class='qq' wx-if="{{item.ostatus==1}}">
+
+
+        <!--团购-->
+        <view class="conblock paddinglr" wx:if="{{item.isTrade=='false'}}" mode="widthFix">
+          <view class='chtop flexbox' bindtap='linkGrouDetail' data-id="{{item.id}}" data-ostatus="{{item.ostatus}}" data-ucid="{{item.ucid}}">
+            <view class='chbox'>
+              <image src='/images/pic.png' class='chimg' wx:if="{{item.coupic=='/static/images/business/xianjin.png'}}"></image>
+              <image src='{{item.coupic}}' class='chimg' wx:else></image>
+              <text class='icont'>团</text>
+            </view>
+            <view class='flex chcon'>
+              <text class='chname'>{{item.couname}}</text>
+              <text class='chtime'>有效期至：{{item.expirydate}}</text>
+              <text class='chamount charight'>数量：{{item.buynum}}</text>
+              <text class='chamount'>单价：{{item.realamount}}元</text>
+            </view>
+          </view>
+          <view class='chbtn flexcenter flexbox'>
+            <view wx-if="{{item.ostatus==4}}">退款总金额：{{item.realamount*item.buynum}}元</view>
+            <view wx:else>总金额：{{item.realamount*item.buynum}}元</view>
+            <view class='ch_btns flex'>
+              <!-- <button  wx-if="{{item.ostatus==1}}" data-id="{{item.id}}" bindtap='deleteCon' class='btn bcan' type='default'>删除订单</button> -->
+              <label wx:if="{{item.offline==1}}">
+                <button bindtap='refund' data-orderid='{{item.orderid}}' class='btn buse' type='default'>退款</button>
+                <button class='btn bstate' type='default'>已过期</button>
+              </label>
+              <label wx:else>
+                <button wx-if="{{item.ostatus==1}}" data-id="{{item.orderid}}" bindtap='pay' class='btn' type='default'>去支付</button>
+                <button wx-if="{{item.ostatus==2 && item.relOstatus==0}}" bindtap='refund' data-orderid='{{item.orderid}}' class='btn bcan' type='default'>取消订单</button>
+                <button wx-if="{{item.ostatus==2 && item.relOstatus==0}}" data-ucid='{{item.ucid}}' bindtap='consume' class='btn buse' type='default' data-couname="{{item.couname}}" data-ticketType="{{item.ticketType}}" data-ticketIds="{{item.ticketIds}}" data-isvalid="{{item.isvalid}}"
+                  data-isable="{{item.isable}}" data-couid="{{item.couid}}">去使用</button>
+                <button wx-if="{{item.ostatus==4}}" class='btn bstate' type='default'>已退款</button>
+              </label>
+            </view>
+          </view>
+        </view>
+        <!--团购//-->
+      </view>
+      <!--团购-->
+      <view class="conblock paddinglr" wx:if="{{item.isTrade=='false'}}" mode="widthFix">
+        <view class='chtop flexbox' bindtap='linkGrouDetail' data-id="{{item.id}}" data-ostatus="{{item.ostatus}}">
+          <view class='chbox'>
+            <!-- <image src='/images/pic.png' class='chimg' wx:if="{{item.coupic=='/static/images/business/xianjin.png'}}"></image> -->
+            <image src='{{item.coupic}}' class='chimg'></image>
+            <text class='icont'>团</text>
+          </view>
+          <view class='flex chcon'>
+            <text class='chname'>{{item.couname}}</text>
+            <text class='chtime'>有效期至：{{item.expirydate}}</text>
+            <text class='chamount charight'>数量：{{item.buynum}}</text>
+            <text class='chamount'>单价：{{item.realamount}}元</text>
+          </view>
+        </view>
+        <view class='chbtn flexcenter flexbox'>
+          <view wx-if="{{item.ostatus==4}}">退款总金额：{{item.realamount*item.buynum}}元</view>
+          <view wx:else>总金额：{{item.realamount*item.buynum}}元</view>
+          <view class='ch_btns flex'>
+            <!-- <button  wx-if="{{item.ostatus==1}}" data-id="{{item.id}}" bindtap='deleteCon' class='btn bcan' type='default'>删除订单</button> -->
+            <label wx:if="{{item.offline==1}}">
+              <button bindtap='refund' data-orderid='{{item.orderid}}' class='btn buse' type='default'>退款</button>
+              <button class='btn bstate' type='default'>已过期</button>
+            </label>
+            <label wx:else>
+              <button wx-if="{{item.ostatus==1}}" data-id="{{item.orderid}}" bindtap='pay' class='btn' type='default'>去支付</button>
+              <button wx-if="{{item.ostatus==2 && item.relOstatus==0}}" bindtap='refund' data-orderid='{{item.orderid}}' class='btn bcan' type='default'>取消订单</button>
+              <button wx-if="{{item.ostatus==2 && item.relOstatus==0}}" data-ucid='{{item.ucid}}' bindtap='consume' class='btn buse' type='default' data-couname="{{item.couname}}" data-ticketType="{{item.ticketType}}" data-ticketIds="{{item.ticketIds}}" data-isvalid="{{item.isvalid}}"
+                data-isable="{{item.isable}}" data-couid="{{item.couid}}">去使用</button>
+              <button wx-if="{{item.ostatus==4}}" class='btn bstate' type='default'>已退款</button>
+            </label>
+          </view>
+        </view>
+      </view>
+      <!--团购//-->
+      <view data-index="{{index}}" bindtap="delItem" class="inner del" data-id="{{item.id}}" wx-if="{{item.ostatus==1}}">删除</view>
+    </view>
+    <view class='dataOver {{ishide? "":"hide"}}'>{{statetip}}</view>
+  </view>
+
+  <view class='no_img{{skinStyle}}'>
+    <image class="nodata {{nodata? '':'hide'}} yellow" src="/images/default.png" id='nodata'></image>
+    <image class="nodata {{nodata? '':'hide'}} dark" src="/images/default.png" id='nodata'></image>
+    <image class="nodata {{nodata? '':'hide'}} pink" src="/images/default2.png" id='nodata'></image>
+    <view class="no_tit {{nodata? '':'hide'}}" style='color:#999;text-align:center;margin-top:40rpx;'>没有任何内容哦！</view>
+  </view>
+</view>
+
+
+
+<view class="page {{pagedata? 'hide':''}}" id='pages{{skinStyle}}'>
+  <view class="header flexbox flexcenter">
+    <block wx:for="{{titles}}" wx:key="{{titlesId}}" class="item">
+      <view class='flex li {{item.act==active? "active":""}}' data-act="{{item.act}}" bindtap='chooseAct'>{{item.orderName}}</view>
+    </block>
+  </view>
+
+
+
+  <view class='no_img{{skinStyle}}'>
+    <image class="nodata {{nodata? '':'hide'}} yellow" src="/images/default.png" id='nodata'></image>
+    <image class="nodata {{nodata? '':'hide'}} dark" src="/images/default.png" id='nodata'></image>
+    <image class="nodata {{nodata? '':'hide'}} pink" src="/images/default2.png" id='nodata'></image>
+    <view class="no_tit {{nodata? '':'hide'}}" style='color:#999;text-align:center;margin-top:40rpx;'>没有任何内容哦！</view>
+  </view>
+</view>

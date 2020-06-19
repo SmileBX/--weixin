@@ -1,0 +1,27 @@
+<!--pages/share/share.wxml-->
+
+ <view class='shareDetail' hidden="{{maskHidden == true}}">
+  <view class='share_bg'>
+    <image src='/images/bg.jpg' class=''></image>
+    <view class='share_info'>
+      <view class='h2'>{{serveDetails.shopname}}</view>
+      <view class='info'>{{serveDetails.companyremark}}</view>
+      <view class='code'><image src='{{serveDetails.url}}'></image></view>
+      <view class='code_info'><text>扫码进店体验</text><text>更能获取更多优惠哦！</text></view>
+    </view>
+  </view>
+</view> 
+
+
+     <view class='' hidden="{{maskHidden == false}}">
+      <image src="{{imagePath}}" class='shengcheng' bindtap='previewImage' data-src="{{imagePath}}"></image>
+
+      <canvas  id="mycanvas"  style="width: 750px;height: 1334px;position:fixed;top:9999px;" canvas-id="mycanvas"/>
+
+  </view>
+
+
+        <view class='baocun' bindtap='formSubmit'  wx:if="{{modal}}">点击生成图片</view> 
+
+
+

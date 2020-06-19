@@ -1,0 +1,145 @@
+/**index.wxss**/
+page{
+  height: 100%;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.getUser{
+  background: #FEBA45;
+  border-radius: 50rpx;
+  color: #FFFFFF;
+  font-size: 30rpx;
+  line-height: 46rpx;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx 20rpx 8rpx 20rpx;
+  border-radius: 50%;
+  /* border:1rpx solid #fff; */
+  /* box-shadow: 0 0 5px #aaa */
+}
+.userinfo-nickname {
+  font-weight: bold;
+  font-size: 32rpx;
+  color: #FFFFFF;
+}
+.header{
+  width:100%;
+  position: relative;
+  box-sizing: border-box;
+  background:#313131;
+  height: 280rpx;
+  text-align: center;
+  padding-top:30rpx;
+}
+.main{
+  margin-top:20rpx;
+  background:#313131;
+}
+.anibox{
+  width:100%;
+  height: 300rpx;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: -1;
+  overflow: hidden;
+}
+.orderlist{
+  height: 120rpx;
+  text-align:center;
+  background:#fff;
+  color:#8a8a8a;
+  box-shadow: 0 1px 5px #aaa;
+}
+.orimg{
+  width:40rpx;
+  height:40rpx;
+  display: inline-block;
+}
+.text{
+  display: block;
+  font-size:28rpx;
+  margin-top:-10rpx;
+}
+.aniImage{
+  width: 100%;
+  height: 680rpx;
+  -webkit-filter: blur(6px); 
+  -moz-filter: blur(6px);
+  -ms-filter: blur(6px);    
+  filter: blur(6px);
+}
+.m-block{
+  color: #FFFFFF;
+  padding: 0 20rpx;
+  height: 123rpx;
+  font-size:32rpx;
+  border-bottom: 1rpx solid #242424;
+}
+.m-block:last-child{
+  border: none;
+}
+.m-img{
+  width:140rpx;
+  height: 140rpx;
+  border-radius:50%;
+}
+.mlimg{
+  width:36rpx;
+  height: 36rpx;
+  display: inline-block;
+  vertical-align: top;
+  margin-right:10rpx;
+}
+.phone{
+   width:56rpx;
+   height: 56rpx;
+}
+.cou{
+   width:56rpx;
+   height: 56rpx;
+}
+.intro{
+  position:relative;
+  top:4rpx;
+   width:56rpx;
+   height: 56rpx;
+}
+.order{
+  width: 56rpx;
+  height: 56rpx;
+}
+.mright{
+  width:30rpx;
+  height: 30rpx;
+  
+}
+/*美容没发 */
+#pink { width: 100%; background-color: #f6f6f6;height: 100%;}
+#pink .header{background: #fff;} 
+#pink .main{background: #fff;}
+#pink .m-block{border-bottom:1rpx solid #D8D8D8;color: #545454;}
+#pink .getUser{background: #FF5E71;}
+#pink .dark{display: none;}
+#pink .userinfo-nickname{color: #333333;}
+#pink .m-block:last-child{border: none;}
+
+/*早教 */
+#yellow { width: 100%; background-color: #f6f6f6;height: 100%;}
+#yellow .header{background: #fff;} 
+#yellow .main{background: #fff;}
+#yellow .m-block{border-bottom:1rpx solid #D8D8D8;color: #545454;}
+#yellow .getUser{background: #FEBA45;}
+#yellow .pink{display: none;}
+#yellow .userinfo-nickname{color: #333333;}
+#yellow .m-block:last-child{border: none;}
+
+
+/*健身 */
+#dark { width: 100%; background-color: #242424;height: 100%;}
+#dark .pink{display: none;}

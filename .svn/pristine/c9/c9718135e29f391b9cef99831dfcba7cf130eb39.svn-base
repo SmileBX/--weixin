@@ -1,0 +1,74 @@
+/* pages/shopList/shopList.wxss */
+page{
+  background: #333;
+}
+.shopList{
+  background: #333333;
+  padding:0 20rpx;
+}
+.shopList .purchaseInfo{
+  /* padding-top: 10rpx; */
+}
+.shopList .purchaseAll{
+  padding:0 0 28rpx 0;
+  border-bottom: 1px solid #242424;
+}
+.purchaseAll .h2{
+  display: block;
+  margin-top: 18rpx;
+  font-size: 32rpx;
+  color: #FFFFFF;
+  /* font-weight: bold; */
+  line-height:60rpx;
+}
+.purchaseInfo .purchaseMap{
+  width: 40%;
+  font-size: 28rpx;
+  color: #C2C2C2;
+}
+.shopMicon{
+  margin-left: 20rpx;
+}
+.shopMicon .map_icon{
+  width: 34rpx;
+  height:40rpx;
+  position: relative;
+  padding-right: 22rpx;
+}
+.shopMicon .map_icon::before{
+  content:"";
+  border-left: 2rpx solid #666;
+  display: inline-block;
+  height: 30rpx;
+  position: absolute;
+  right:0rpx;
+}
+.shopMicon .phone_icon{
+  width: 41rpx;
+  height: 41rpx;
+}
+.shopMicon text{
+  margin: 0 10rpx;
+}
+
+/*美容没发 */
+#pink { width: 100%; background-color: #f6f6f6;height: 100%;}
+#pink .shopList{background: #FFFFFF;}
+#pink .shopList .purchaseAll{border-bottom: 1px solid #D8D8D8;}
+#pink .purchaseAll .h2{color: #4D4D4D;padding-top:14rpx;margin-top: 0;}
+#pink .purchaseInfo .purchaseMap{color: #666666;}
+#pink .shopMicon .dark{display: none;}
+#pink .shopMicon .yellow{display: none;}
+
+/*早教 */
+#yellow { width: 100%; background-color: #f6f6f6;height: 100%;}
+#yellow .shopList{background: #FFFFFF;}
+#yellow .shopList .purchaseAll{border-bottom: 1px solid #D8D8D8;}
+#yellow .purchaseAll .h2{color: #4D4D4D;padding-top:14rpx;margin-top: 0;}
+#yellow .purchaseInfo .purchaseMap{color: #666666;}
+#yellow .shopMicon .dark{display: none;}
+#yellow .shopMicon .pink{display: none;}
+
+/* 健身 */
+#dark .shopMicon .yellow{display: none;}
+#dark .shopMicon .pink{display: none;}

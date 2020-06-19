@@ -1,0 +1,44 @@
+<view class="header">
+  <image src='{{shopimg}}' class='logo'></image>
+  <text class="logoname">{{shopName}}</text>
+</view>
+
+<view class="main paddinglr">
+   <view class='li flexbox flexcenter'>
+      <view class='left'>联系方式：</view>
+      <view class='flex'>
+         <text class='telnum' >{{phonecall}}</text>
+      </view>
+      <view class='phone' bindtap='phonecallevent'>
+         <image src='/images/phone.png' class='tel'></image>
+      </view>
+   </view>
+   <view class='li flexbox flexcenter'>
+      <view class='left'>详细地址：</view>
+      <view class='flex addr'>
+       {{addr}}
+      </view>
+   </view>
+   <view class='li flexbox flexcenter'>
+      <view class='left'>商户简介：</view>
+      <view class='flex addr'>
+       {{companyremark}}
+      </view>
+   </view>
+    <view class='li flexbox flexcenter'>
+      <view class='left'>商户图片：</view>
+      <view class='flex'>
+          共{{storeALL.length}}张
+      </view>
+   </view>
+
+   <swiper indicator-dots="{{indicatorDots}}" display-multiple-items="2" next-margin="100rpx"
+     autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+     <block wx:for="{{storeALL}}" wx:key="storePicId">
+       <swiper-item class="">
+           <image src="{{item}}" class="slide-image img"/>
+       </swiper-item>
+     </block>
+   </swiper>
+
+</view>

@@ -1,0 +1,116 @@
+@import "../couponList/couponList.wxss";
+@import "../order/order.wxss";
+page{
+  background-color:#f5f5f5;
+} 
+.coutitle{
+  text-align: center;
+  height: 100rpx;
+  background:#fff;
+  border-bottom:1rpx solid #ddd;
+}
+.time{
+  position: relative;
+}
+.active{
+  color:#febb45;
+}
+.cBlock{
+  width:100%;
+  height: 300rpx;
+  position: relative;
+  color:#aaa;
+  margin-top:20rpx;
+}
+.cmakes{
+  color:#333;
+}
+.cbg{
+  width:100%;
+  height: 300rpx;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index:-1;
+}
+.ctop{
+  padding:12rpx;
+  font-size:30rpx;
+}
+.cr{
+  display: inline-block;
+  border-left:1rpx solid #aaa;
+  padding-left:30rpx;
+  margin-left:30rpx;
+  height: 30rpx;
+  vertical-align:middle;
+  line-height: 28rpx;
+}
+.cbtm{
+  position: relative;
+  height: 230rpx;
+ 
+}
+.price{
+  position: relative;
+  top:20rpx;
+  left: 20rpx;
+  font-size:32rpx;
+}
+.big{
+  font-size:80rpx;
+}
+.day{
+  position: absolute;
+  left:20rpx;
+  bottom:20rpx;
+  font-size:28rpx;
+}
+button.makeBtn{
+  position: absolute;
+  right:20rpx;
+  bottom:30rpx;
+  background-color: #aaa;
+  padding:0 30rpx;
+  border-radius: 10rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size:30rpx;
+}
+.cmt{
+  color: #ff9e05;
+}
+button.cmBtn{
+   background-color: #80c269;
+}
+.makelink{
+  width: 40rpx;
+  height: 55rpx;
+   position: absolute;
+  right:76rpx;
+  bottom:117rpx;
+}
+.remark{
+  width:100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2; 
+}
+.btnbox{
+   position: fixed;
+   bottom: 0;
+   left:0;
+   width: 100%;
+   box-sizing:border-box;
+   background:#fff;
+   padding-top:30rpx;
+   padding-bottom:30rpx;
+}
+button.btn-common{
+  margin-top:0;
+}
+.padbottom{
+  padding-bottom: 170rpx;
+}

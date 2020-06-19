@@ -1,0 +1,55 @@
+<!--index.wxml-->
+<view class='page' id='{{skinStyle}}'>
+<view class="container">
+   <view class="header">
+       <view class="userinfo">
+          <view wx:if="{{!hasUserInfo && canIUse}}">
+            <image  src="/images/no_header.png" class="userinfo-avatar" background-size="cover"></image>
+            <button  open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='getUser'> 点击授权登录 </button>
+          </view>  
+          <block wx:else>
+            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+          </block>
+        </view>
+   </view>
+
+   <view class='main'>
+      <view  class='m-block flexbox flexcenter' bindtap='getphone'>
+            <image src='/images/mine_icon01.png'  class='mlimg phone dark'></image>
+            <image src='/images/mine_icon011.png'  class='mlimg phone pink'></image>
+          <view class='flex'>绑定手机号码</view>
+          <image src='../../images/right_grey1.png' class='mright'></image>
+      </view>
+
+      <navigator  class='m-block flexbox flexcenter' url="../../pages/discountCoupon/discountCoupon" >
+         <!-- <navigator class='m-block flexbox flexcenter' url="../../pages/couponList/couponList?coutype=0"> -->
+
+          <image src='/images/mine_icon02.png' class='mlimg cou dark'></image>
+          <image src='/images/mine_icon022.png' class='mlimg cou pink'></image>
+          <view class='flex'>优惠券</view>
+          <image src='../../images/right_grey1.png' class='mright'></image>
+      </navigator>
+
+      <view  class='m-block flexbox flexcenter' bindtap='myOrer'>
+          <image src='/images/mine_icon03.png' class='mlimg order dark'></image>
+          <image src='/images/mine_icon033.png' class='mlimg order pink'></image>
+          <view class='flex'>我的订单</view>
+          <image src='../../images/right_grey1.png' class='mright'></image>
+      </view>
+
+      <view class='m-block flexbox flexcenter' bindtap='share'>
+          <image src='/images/mine_icon05.png' class='mlimg intro dark'></image>
+           <image src='/images/mine_icon044.png' class='mlimg intro pink'></image>
+          <view class='flex'>推荐给好友</view>
+          <image src='../../images/right_grey1.png' class='mright'></image>
+      </view>
+
+      <!--<view  class='m-block flexbox flexcenter' data-url="../../pages/order/order" bindtap='foonterLink'>
+          <image src='/images/mi_order.png' class='mlimg '></image>
+          <view class='flex'>我的订单</view>
+          <image src='../../images/right_grey.png' class='mright'></image>
+      </view>-->
+   </view>
+</view>
+</view>

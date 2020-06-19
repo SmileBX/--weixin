@@ -1,0 +1,214 @@
+
+.header{
+   text-align: center;
+   padding:25rpx 0 15rpx 0;
+   background:#333;
+}
+.shopimg{
+  width: 132rpx;
+  height: 132rpx;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.shopmess{
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  margin-left:20rpx;
+}
+.shopname{
+  font-size: 34rpx;
+  text-shadow: 0 0 0;
+  color: #FFFFFF;
+}
+.shoptype{
+  color:#FFFFFF;
+}
+.main{
+  background:#333;
+  padding-bottom: 30rpx;
+}
+.minput{
+  text-shadow: 0 0 0;
+  padding: 35rpx 0;
+  font-size: 32rpx;
+  border-bottom:1rpx solid #242424;
+  color: #C2C2C2;
+}
+.instructions{
+  text-align: right;
+  font-size: 22rpx;
+  color: #FF3939;
+  margin-top: 10rpx;
+}
+.mpinput{
+  text-align: right;
+  color:#ff3939;
+}
+.mpinpu{
+  text-align: right;
+  color:#92969C;
+  font-size: 24rpx;
+}
+.phcolor{
+  color: #92969C;
+}
+.prif{
+  width: 20rpx;
+  font-size: 36rpx;
+}
+.remarkInfo{
+  font-size: 28rpx;
+  color: #C2C2C2;
+}
+.remark{
+  border: 2px solid #B2B2B2;
+  padding:10rpx 10rpx;
+  margin-top: 30rpx;
+  color:#92969c;
+  font-size: 28rpx;
+  border-radius: 8rpx;
+}
+.reImg{
+  display: inline-block;
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 10rpx;
+}
+/* .tipint{
+   display: inline-block;
+   vertical-align: middle;
+   width: 548rpx;
+} */
+.mdown{
+  color:#0080bf;
+  text-shadow: 0 0 0;
+  text-align: center;
+  padding: 25rpx 0 10rpx 0;
+}
+.mdimg{
+  display: inline-block;
+  width: 27rpx;
+  height: 17rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+.maincoupon{
+  margin-top:20rpx;
+  background: #333;
+}
+.maincoupon .tit{
+  font-size: 30rpx;
+  color: #fff;
+  padding:30rpx 0 15rpx 15rpx;
+}
+.coublock{
+  padding:35rpx 0 25rpx 0;
+  border-bottom: 1px solid #242424;
+}
+.couimg{
+  width: 42rpx;
+  height: 31rpx;
+}
+.couright{
+  width: 28rpx;
+  height: 35rpx;
+}
+.couname{
+  padding-left:15rpx;
+  color:#C2C2C2;
+  font-size: 30rpx;
+  position: relative;
+}
+.bbor{
+  border-bottom: 1rpx solid #d8d8d8;
+}
+.discount{
+  text-align: right;
+  font-size: 24rpx;
+  color: #C2C2C2;
+  padding:20rpx 0;
+}
+.disprice{
+  margin-left: 20rpx;
+  font-size: 30rpx;
+  color: #EC3838;
+}
+.icon{
+  display: block;
+  width: 15rpx;
+  height: 15rpx;
+  background: #ff3939;
+  position: absolute;
+  right: 5rpx;
+  top: -3rpx;
+  border-radius: 50%;
+}
+.footer{
+  margin-top:20rpx;
+  background: #333;
+  padding-top: 80rpx;
+  padding-bottom: 150rpx;
+}
+.sumPrice{
+  border-radius: 10rpx;
+  width: 100%;
+  background:#FEBB45;
+  padding:25rpx 0;
+  text-align: center;
+  font-size:36rpx;
+  color:#333333;
+}
+.mred{
+  color:#ff3939;
+  font-size:36rpx;
+  padding-left:5rpx;
+  font-weight: bold;
+  position: relative;
+  top: 2rpx;
+}
+.ftip{
+  text-align: center;
+  color:#92969c;
+  margin-top: 50rpx;
+  font-size:28rpx;
+}
+.righttext{
+  float:right;
+}
+
+
+
+/*美容没发 */
+#pink { width: 100%; background-color: #f6f6f6;height: 100%;}
+#pink .header {background: #fff;}
+#pink .header .shopname{color: #333;}
+#pink .header .shoptype{color: #333;}
+#pink .main{background: #fff;}
+#pink .maincoupon {background: #fff;}
+#pink .maincoupon .tit{color: #333;}
+#pink .couname {color: #555555;}
+#pink .footer{background: #fff;}
+#pink  .minput {border-bottom: 1px solid #D8D8D8;}
+#pink .coublock{border-bottom: 1px solid #D8D8D8;}
+#pink .footer .sumPrice{background: #FC7A8A;color: #fff;}
+#pink .mred{color: #fff;}
+
+/* 早教 */
+#yellow { width: 100%; background-color: #f6f6f6;height: 100%;}
+#yellow .header {background: #fff;}
+#yellow .header .shopname{color: #333;}
+#yellow .header .shoptype{color: #333;}
+#yellow .main{background: #fff;}
+#yellow .maincoupon {background: #fff;}
+#yellow .maincoupon .tit{color: #333;}
+#yellow .couname {color: #555555;}
+#yellow .footer{background: #fff;}
+#yellow  .minput {border-bottom: 1px solid #D8D8D8;}
+#yellow .coublock{border-bottom: 1px solid #D8D8D8;}
+#yellow .footer .sumPrice{background: #F1C618;color: #fff;}
+#yellow .mred{color: #fff;}
+
+/*健身 */
+#dark { width: 100%; background-color: #242424;height: 100%;}

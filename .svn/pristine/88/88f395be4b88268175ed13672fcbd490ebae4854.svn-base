@@ -1,0 +1,24 @@
+<!--pages/shopList/shopList.wxml-->
+<view class='page' id='{{skinStyle}}'>
+<view class='shopList'>
+  <view class='purchaseInfo'>
+    <view class='purchaseAll'  data-id='{{storyLogId}}' wx:for="{{storyLog}}" >
+      <view class='purchaseDetail  flexbox flexcenter'>
+          <view class='flex'  bindtap='goDetail' data-shopid="{{item.shopid}}">
+          <view class='h2' >{{item.shopname}}</view>
+          <view class='purchaseMap'  >{{item.address}}</view>
+          </view>
+          <view class='shopMicon'>
+            <image src='/images/map_icon.png' class='map_icon dark' bindtap="getMap"  data-lngs='{{item.lat}}' data-lans="{{item.lng}}" data-sname='{{item.shopname}}' data-addr='{{item.address}}' ></image>
+               <image src='/images/map_icon1.png' class='map_icon pink' bindtap="getMap"  data-lngs='{{item.lat}}' data-lans="{{item.lng}}" data-sname='{{item.shopname}}' data-addr='{{item.address}}' ></image>
+                  <image src='/images/map_icon2.png' class='map_icon yellow' bindtap="getMap"  data-lngs='{{item.lat}}' data-lans="{{item.lng}}" data-sname='{{item.shopname}}' data-addr='{{item.address}}' ></image>
+            <text></text>
+            <image src='/images/phone_icon.png' class='phone_icon dark'  bindtap='phonecallevent' data-tel="{{item.tel}}"></image>
+             <image src='/images/phone_icon1.png' class='phone_icon pink'  bindtap='phonecallevent' data-tel="{{item.tel}}"></image>
+              <image src='/images/phone_icon2.png' class='phone_icon yellow'  bindtap='phonecallevent' data-tel="{{item.tel}}"></image>
+          </view>
+      </view>    
+    </view>
+  </view>
+</view>
+</view>

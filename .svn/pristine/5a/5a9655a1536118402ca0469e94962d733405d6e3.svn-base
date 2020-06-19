@@ -1,0 +1,10 @@
+<!--pages/merchantsAlbum/merchantsAlbum.wxml-->
+<view class='page' id='{{skinStyle}}'>
+<view class='merchantsAlbum'>
+  <view   class='merchantsInfo'>
+    <view  class='merchantimg'>
+        <image src='{{item.picusr}}' wx:for="{{merchantsAlbum}}"  bindtap="imgYu" data-list="{{merchantsAlbum}}" data-src="{{item.picusr}}" mode="aspectFill"></image>
+    </view>
+  </view>
+</view>
+</view>

@@ -1,0 +1,44 @@
+<view class="groupon">
+    <image class="grouimg" src="{{gouimg}}"></image>
+</view>
+
+<view class="grouDetail paddinglr">
+   <view class='name'>{{grouInfo.couname}}</view>
+   <view class="time">有效期：{{grouInfo.effectdate}}至{{grouInfo.expirydate}}</view>
+   <view class='other'>
+        <text class='price'><text class="strong">{{grouInfo.couprice}}</text>元</text>
+        <!-- <text class='bank'>邮储银行</text> -->
+   </view>
+   <view class='des flexbox flexcenter'>
+       <view class='flex desitem'>
+          <icon type="success" size="18" color="orange" class="icon"/>
+          <text class="destext">可退货</text>
+       </view>
+       <view class='flex desitem'>
+          <icon type="success" size="18" color="orange" class="icon"/>
+          <text class="destext">过期退</text>
+       </view>
+       <!-- <view class='flex desitem'>
+          <icon type="success" size="18" color="orange" class="icon"/>
+          <text class="destext">免预约</text>
+       </view> -->
+       <view class='flex desitem'>
+          <icon type="success" size="18" color="orange" class="icon"/>
+          <text class="destext">已售{{grouInfo.getnums}}</text>
+       </view>
+   </view>
+</view>
+
+<view class='rule paddinglr'>
+   <view class='title'>优惠细则</view>
+   <view class="textarea">
+       <text class="p" >{{grouInfo.cremark}}</text>
+   </view>
+</view>
+
+<view class='footer'>
+   <button class='fbtm' bindtap='goBuy'>{{grouInfo.couprice}}元立即购买</button>
+</view>
+
+
+<!-- <include src="../menu/menu.wxml" /> -->

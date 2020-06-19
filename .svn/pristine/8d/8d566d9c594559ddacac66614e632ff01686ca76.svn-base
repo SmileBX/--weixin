@@ -1,0 +1,73 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/refund/refund",
+    "pages/payCoupon/payCoupon",
+    "pages/shopList/shopList",
+    "pages/shopLists/shopLists",
+    "pages/pay/pay",
+    "pages/pays/pays",
+    "pages/couponDetail/couponDetail",
+    "pages/coupon/coupon",
+    "pages/couponList/couponList",
+    "pages/purchaseDetails/purchaseDetails",
+    "pages/order/order",
+    "pages/grouDetail/grouDetail",
+    "pages/serve/serve",
+    "pages/serveDetails/serveDetails",
+    "pages/intro/intro",
+    "pages/share/share",
+    "pages/discountCoupon/discountCoupon",
+    "pages/changeNumber/changeNumber",
+    "pages/orderDetail/orderDetail",
+    "pages/mine/mine",
+    "pages/paySuccess/paySuccess",
+    "pages/grouponDetail/grouponDetail",
+    "pages/merchantsAlbum/merchantsAlbum",
+    "pages/chooseTicket/chooseTicket",
+    "pages/succeed/succeed",
+    "pages/map/map",
+    "pages/logs/logs"
+  ],
+    "navigateToMiniProgramAppIdList": [
+      "wxedfcee01239748f9"
+    ],
+      "permission": {
+        "scope.userLocation": {
+          "desc": "你的位置信息将用于小程序位置展示"
+        }
+      },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#242424",
+    "navigationBarTitleText": "标题",
+    "navigationBarTextStyle": "#fff",
+    "backgroundColor": "#242424"
+  },
+  "tabBar": {
+    "backgroundColor": "#242424",
+    "color": "#7F8389",
+    "selectedColor": "#feba45",
+    "borderStyle": "#ccc",
+    "list": [
+      {
+        "iconPath": "images/icHome.png",
+        "selectedIconPath": "images/icHomeHover.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "images/icOrder.png",
+        "selectedIconPath": "images/icOrderHover.png",
+        "pagePath": "pages/order/order",
+        "text": "订单"
+      },
+      {
+        "iconPath": "images/icMine.png",
+        "selectedIconPath": "images/icMineHover.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  }
+}

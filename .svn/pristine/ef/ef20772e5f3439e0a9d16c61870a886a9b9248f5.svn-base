@@ -1,0 +1,107 @@
+<!--优惠券列表-->
+<view class="page {{pagedata? '':'hide'}}" id='{{skinStyle}}'>
+<view class="prolist paddinglr {{nodata? 'hide':''}}" wx:if="{{coutype==0}}">
+      <view class='probtn'>
+      <block wx:for="{{conponLog}}" wx:key="conponLogId">
+          <!--代金券  -->
+           <view class='bblock' wx:if="{{coutype==0 && item.coutype==1}}" data-id="{{item.id}}" bindtap='routerLink'>
+              <image src='/images/discounts_img01.png' class='bimg dark'></image>
+              <image class="bimg pink" src="/images/discounts_img011.png"></image>
+                <image class="bimg yellow" src="/images/discounts_img013.png"></image>
+              <view class=' flexbox flexcenter ccontnet'>
+                  <view class='flex'>
+                    <view class='pont ptitle'>
+                      <!-- <view class='ponname'>代金券 </view> -->
+                    </view>
+                    <view class="conText"><text class='csmall'>￥</text>{{item.couamount}}</view>
+                 </view>
+                  <view class='cright'>
+                    <text class='tname'>{{item.couname}}</text>
+                   <text class='pont pred'>{{item.mincost}}</text>
+                    <button type="default" class='smallbtn gooduse money'  >立即领取 </button>
+                  </view>
+              </view>
+           </view>
+
+           <!--折扣券  -->
+           <view class='bblock'  wx:if="{{coutype==0 && item.coutype==2}}"  data-id="{{item.id}}" bindtap='routerLink'>
+              <image src='/images/discounts_img02.png' class='bimg dark'></image>
+              <image class="bimg pink" src="/images/discounts_img022.png"></image>
+                <image class="bimg yellow" src="/images/discounts_img023.png"></image>
+              <view class=' flexbox flexcenter ccontnet'>
+                  <view class='flex'>
+                    <view class='pont ptitle'>
+                      <!-- <view class='ponname'>折扣券 </view> -->
+                    </view> 
+                    <view class="conText czhe">{{item.discountrate}}<text class='csmall'>折</text></view>
+                 </view>
+                  <view class='cright'>
+                    <text class='tname'>{{item.couname}}</text>
+                    <text class='pont pred'>{{item.mincost}}</text>
+                    <button type="default" class='smallbtn gooduse zhe' id="zhe">立即领取 </button>
+                  </view>
+              </view>
+           </view>
+
+           <!--兑换券  -->
+           <view class='bblock' wx:if="{{coutype==0 && item.coutype==4}}" data-id="{{item.id}}" bindtap='routerLink'>
+              <image src='/images/discounts_img03.png' class='bimg dark'></image>
+               <image class="bimg pink" src="/images/discounts_img031.png"></image>
+                <image class="bimg yellow" src="/images/discounts_img033.png"></image>
+              <view class=' flexbox flexcenter ccontnet'>
+                  <view class='flex'>
+                    <view class='pont ptitle'>
+                      <!-- <view class='ponname'>兑换券 </view> -->
+                    </view>
+                    <view class="conText cdui"  style='font-size:36rpx;'><text id="dsm" class='csmall ' style='font-size:36rpx;'>{{item.giftname}}</text></view>
+                 </view>
+                  <view class='cright'>
+                    <text class='tname'>{{item.couname}}</text>
+                   <text class='pont pred'>{{item.mincost}}</text>
+                    <button type="default" class='smallbtn gooduse dui'  >立即领取 </button>
+                  </view>
+              </view>
+           </view>
+        </block>
+      </view>
+   
+    <view class='dataOver {{ishide? "":"hide"}}'>{{statetip}}</view>
+</view>
+
+<!--团购券列表-->
+<view class="  {{nodata? 'hide':''}}" wx:else>
+   <block wx:for="{{conponLog}}" wx:key="conponLogId" >
+    <view class="conheader paddinglr brtop" data-id="{{item.id}}" bindtap='routerLinks'>
+        <view class='chtop flexbox'>
+          <view class='chbox'>
+            <!-- <image wx:if="{{item.coupic=='/static/images/business/xianjin.png'}}" src='/images/pic.png' class='chimg'></image> -->
+            <image  src='{{item.coupic}}' class='chimg'></image>
+            <text class='icont'>团</text>
+          </view>
+          <view class='flex chcon'>
+              <text class='chname'>{{item.couname}}</text>
+              <text class='chtime'>有效期至：{{item.expirydate}}</text>
+              <text class='chamount charight'>数量：{{item.remainnum}}</text>
+              <text class='chamount'>单价：{{item.realamount}}元</text>
+          </view>
+        </view>
+        <view class='flexbox chbtn flexcenter'>
+            <view class='flex'></view>
+            <view class='flex tright'>
+               <button type="default" class='smallbtn gooduse goubtn' >购买 </button>
+            </view>
+        </view>
+    </view>
+   </block>
+    <view class='dataOver {{ishide? "":"hide"}}'>{{statetip}}</view>
+</view>
+
+<image class="nodata {{nodata? '':'hide'}}" src="/images/noData.png"></image>
+
+</view>
+
+
+
+<view class="page {{pagedata? 'hide':''}}" id='pages{{skinStyle}}'>
+<image class="nodata {{nodata? 'hide':''}}" src="/images/noData.png"></image>
+</view>

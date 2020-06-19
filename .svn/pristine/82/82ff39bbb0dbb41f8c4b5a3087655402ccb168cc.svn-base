@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "热炼健身",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "backgroundTextStyle": "dark"
+}

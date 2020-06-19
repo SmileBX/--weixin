@@ -1,0 +1,347 @@
+page{
+  /* background: #333; */
+  /* height: 100%; */
+}
+procon{
+  background:#333;
+  position: relative;
+  padding:15rpx 0;
+  font-size:28rpx;
+}
+.goodname{
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow:hidden;
+  color:#29273a;
+  font-weight: bold;
+}
+.goodintro{
+  font-size:26rpx;
+  color:#9b9b9b;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow:hidden;
+}
+.goodprice{
+  font-size:26rpx;
+  color:#846839;
+  display: block;
+  font-weight: bold;
+}
+button.goodbuy{
+  position: absolute;
+  right:20rpx;
+  bottom: 15rpx;
+}
+.bblock{
+  width:100%;
+  margin-bottom:25rpx;
+  height: 218rpx;
+  position: relative;
+  /* background:#fff; */
+}
+.bimg{
+  width: 101%;
+  height: 218rpx;
+  position: absolute;
+  top:0;
+  left:0;
+}
+.ccontnet{
+  height: 242rpx;
+  position:relative;
+}
+.fixedMenu{
+  width: 100rpx;
+}
+.cPri{
+  width: 165rpx;
+  text-align: center;
+  color:#846839;
+}
+.red{
+  font-size: 50rpx;
+  font-weight: bold;
+}
+.pont{
+  display: block;
+  color:#bdc0c5;
+  font-size: 30rpx;
+  line-height: 40rpx;
+}
+.ptitle{
+  color:#92969c;
+  font-weight: bold;
+  font-size: 32rpx;
+}
+.pred{
+  color:#846839;
+}
+.cright{
+  width: 151rpx;
+  text-align: center
+}
+.smallbtn.gooduse{
+  background:#FEBB45 ;
+  font-size: 30rpx;
+  border-radius: 2rpx;
+  padding:5rpx 0; 
+  height: 50rpx;
+  width:115rpx;
+  color: #333;
+}
+.ponname{
+  color:#fff;
+  position: absolute;
+  top:30rpx;
+  left:32rpx;
+  font-size: 28rpx;
+}
+
+/**团购券**/
+.conheader{
+  background:#333;
+  padding-top:48rpx;
+  box-sizing: border-box;
+}
+.chtop{
+  height: 183rpx;
+  border-bottom:1rpx solid #242424;
+}
+.chbox{
+  width: 176rpx;
+  position: relative;
+}
+.chimg{
+  width: 155rpx;
+  height: 108rpx;
+}
+.icont{
+  display: block;
+  width: 38rpx;
+  height: 38rpx;
+  text-align: center;
+  line-height: 38rpx;
+  font-size: 28rpx;
+  color:#fff;
+  background:#febb45;
+  position: absolute;
+  left:0;
+  top:0;
+}
+.chname{
+  color:#DBDBDB;
+  display: block;
+  height: 75rpx;
+  line-height: 32rpx;
+  margin-top:-3rpx;
+  font-size: 32rpx;
+}
+.chtime{
+  color:#a7a7a7;
+  display: block;
+  font-size: 28rpx;
+}
+.chamount{
+  color:#92969c;
+  display: block;
+  font-size: 28rpx;
+}
+.chbtn{
+  color:#747474;
+  height: 100rpx;
+}
+.tright{
+  text-align: right;
+}
+.chamount{
+  color:#92969c;
+  display:inline-block;
+}
+.charight{
+  margin-right:76rpx;
+}
+.remark{
+  height: 80rpx;
+  width:100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2; 
+}
+
+
+/*全样式修改*/
+.prolist{
+  /* padding-top:20rpx; */
+}
+.bblock{
+  margin-bottom:25rpx;
+}
+.bblock:last-child{
+  margin-bottom:0;
+}
+.ponname{
+  text-align:center;
+  display:inline-block;
+  vertical-align: middle;
+  position: relative;
+  top:-5rpx;
+  left:26rpx;
+}
+.ponname.zhe{
+  background:#846839;
+}
+.ponname.dui{
+  background:#846839;
+}
+.pont image{
+  width:100%;
+  height:100%;
+}
+.pont{
+  font-size: 34rpx;
+}
+.ptitle{
+  color:#846839;
+  font-size:40rpx;
+  font-weight: normal;
+  text-shadow: 0 0 0;
+}
+.tname{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow:hidden;
+  display: inline-block;
+  vertical-align: middle;
+  font-weight:bold;
+  font-size:34rpx;
+}
+.tzhe{
+  color:#846839;
+}
+.tdui{
+  color:#846839;
+}
+
+.pred {
+  color:#846839;
+  margin-top:4rpx;
+  font-size:30rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow:hidden;
+  display: block;
+}
+.remark{
+  font-size:28rpx;
+  height: inherit;
+}
+.cright {
+  width:420rpx;
+  text-align:center;
+}
+
+.smallbtn.gooduse{
+  border-radius: 50rpx;
+  margin-top:14rpx;
+  width:86px;
+  height:60rpx;
+  line-height: 60rpx;
+  padding:0;
+  font-size:32rpx;
+
+}
+.smallbtn.gooduse.zhe{
+  background:#846839;
+}
+.smallbtn.gooduse.dui{
+  background:#846839;
+}
+.smallbtn.gooduse.goubtn{
+  margin-top:0;
+}
+
+.conText{
+  font-size:60rpx;
+  color:#846839;
+  font-weight: bold;
+  padding-left:12rpx;
+  margin-top: 18rpx;
+}
+.csmall{
+   font-size:36rpx;
+}
+.cdui{
+  color:#846839;
+}
+.czhe{
+  color:#846839;
+}
+.brtop{
+  border-top:20rpx solid #242424;
+}
+
+/*美容没发 */
+#pink { width: 100%; background-color: #f6f6f6;}
+#pagespink{width: 100%; background-color: #f6f6f6;height: 100%;}
+#pink .conheader {background: #fff;}
+#pink .brtop {border-top:20rpx solid #F5F5F5;}
+#pink .chname{color: #333333;}
+#pink .chtop{border-bottom: 1px solid #D8D8D8;}
+#pink .smallbtn.gooduse{background: #FF5E71;color: #fff;} 
+#pink .icont{background: #FF5E71;}
+#pink .prolist{padding-top: 30rpx;}
+#pink  .prolist .dark{display: none;}
+#pink  .prolist .yellow{display: none;}
+#pink  .prolist .conText{color: #9B62FF;}
+#pink  .prolist .conText .csmall{color: #9B62FF;}
+#pink  .prolist .money{background: #9B62FF;color: #fff;}
+#pink  .prolist .pred {color: #FF3939;}
+#pink  .prolist  .czhe{color: #FF5E71;}
+#pink  .prolist  .czhe .csmall{color: #FF5E71;}
+#pink  .prolist #zhe{background: #FF5E71;color: #fff;}
+#pink  .prolist  #dsm{color: #AE5DA1;}
+#pink  .prolist  .dui{background:#AE5DA1;color: #fff; }
+/*早教 */
+#yellow { width: 100%; background-color: #f6f6f6;}
+#pagesyellow{width: 100%; background-color: #f6f6f6;height: 100%;}
+#yellow .conheader {background: #fff;}
+#yellow .brtop {border-top:20rpx solid #F5F5F5;}
+#yellow .chname{color: #333333;}
+#yellow .chtop{border-bottom: 1px solid #D8D8D8;}
+#yellow .smallbtn.gooduse{background: #F1C40F;color: #fff;} 
+#yellow .icont{background: #F1C40F;}
+#yellow .prolist{padding-top: 30rpx;}
+#yellow  .prolist .dark{display: none;}
+#yellow  .prolist .pink{display: none;}
+#yellow  .prolist .conText{color: #FEBB45;}
+#yellow  .prolist .conText .csmall{color: #FEBB45;}
+#yellow  .prolist .money{background: #FEBB45;color: #fff;}
+#yellow  .prolist .pred {color: #FF3939;}
+#yellow  .prolist  .czhe{color: #F39C11;}
+#yellow  .prolist  .czhe .csmall{color: #F39C11;}
+#yellow  .prolist #zhe{background: #F39C11;color: #fff;}
+#yellow  .prolist  #dsm{color: #45B8FB;}
+#yellow  .prolist  .dui{background:#45B8FB;color: #fff; }
+
+/* 健身 */
+#dark { width: 100%; background-color: #242424;height: 100%;}
+#dark .dataOver{background-color: #242424;}
+#dark .prolist{background-color: #242424;}
+#pagesdark{width: 100%; background-color: #242424;height: 100%;}
+#dark .prolist{padding-top: 30rpx;}
+#dark  .prolist .yellow{display: none;}
+#dark  .prolist .pink{display: none;}
+#dark  .prolist .conText{color: #846839;}
+#dark  .prolist .conText .csmall{color: #846839;}
+#dark  .prolist .money{background: #846839;color: #fff;}
+#dark  .prolist .pred {color: #846839;}
+#dark  .prolist  .czhe{color: #846839;}
+#dark  .prolist  .czhe .csmall{color: #846839;}
+#dark  .prolist #zhe{background: #846839;color: #fff;}
+#dark  .prolist  #dsm{color: #846839;}
+#dark  .prolist  .dui{background:#846839;color: #fff; }

@@ -1,0 +1,20 @@
+<!--pages/succeed/succeed.wxml-->
+
+<!-- <wxs module="filters" src="../../utils/filter.wxs"></wxs> -->
+<view class='page' id='{{skinStyle}}'>
+<view class='content'>
+    <view class='pirce_succeed padd_item'>
+         <view class='border_bot'>
+          <image src='../../images/succ_icon.png'></image>
+          <view>本次成功付款</view>
+          </view>
+    </view>
+    <view class='projet'>
+          <view class='projet_name'><text style='font-size:32rpx;'>￥</text>{{paytime}}</view>
+          <view class='projet_btn'>
+              <view catchtap='consum'>查看订单</view>
+              <view catchtap='switchTabss'>回到首页</view>
+          </view>
+    </view>
+</view>
+</view>

@@ -1,0 +1,669 @@
+/* page{
+  background:#242424;
+} */
+#dark .pink,#dark .yellow{display: none;}
+image{margin: 0;padding: 0;border: none;outline: none;}
+.bg{
+  width:100%;
+  height: 330rpx;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: -1;
+}
+ swiper{
+  height: 360rpx;
+  overflow: hidden;
+}
+.merchantDetail swiper{
+  height: 180rpx;
+}
+.banner{
+  width: 100%;
+  height: 100%;
+}
+.banner .slide-image{
+  width: 100%;
+  height: 360rpx；
+}
+.shopDetaildark{
+  background: #333333;
+  padding:30rpx 15rpx;
+}
+.shopTitle{
+  margin-bottom: 20rpx;
+}
+.shopTitle text{
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #fff;
+}
+.shopTitle image{
+  width: 16rpx;
+  height: 28rpx;
+}
+.shopMap {
+  margin: 6rpx 0;
+}
+.shopMap .shopMtit{
+  margin-top: -12rpx;
+  font-size: 30rpx;
+  color: #EDAC10;
+}
+.shopMicon .map_icon{
+  width: 34rpx;
+  height:40rpx;
+  position: relative;
+  padding-right: 22rpx;
+}
+.shopMicon .map_icon::before{
+  content:"";
+  border-left: 2rpx solid #666;
+  display: inline-block;
+  height: 30rpx;
+  position: absolute;
+  top: 6rpx;
+  right:0rpx;
+}
+.label_icon1{
+  padding:2rpx 4rpx;
+  font-size: 22rpx;
+  border: 1px solid #EDAC10;
+  color: #EDAC10;
+  border-radius: 4rpx;
+  margin-right: 14rpx;
+  display: inline-block;
+  margin-bottom: 10rpx;
+}
+.shopMicon .phone_icon{
+  width: 41rpx;
+  height: 41rpx;
+}
+.shopMicon text{
+  margin: 0 10rpx 0 10rpx;
+}
+.shopTime{
+  margin-bottom: 14rpx;
+}
+.shopTime image{
+  width: 28rpx;
+  height: 28rpx;
+  display: inline-block;
+}
+.shopTime text{
+  color: #C2C2C2;
+  font-size: 28rpx;
+  padding-left: 4rpx;
+}
+.labelInfo{
+  display: inline-block;
+  margin-bottom: 10rpx;
+}
+.labelInfo image{
+  margin-right: 8rpx;
+}
+.labelInfo .label_icon01{
+  width: 76rpx;
+  height: 27rpx;
+  border: 1px solid #EDAC10;
+  border-radius: 4rpx;
+}
+.labelInfo .label_icon02{
+  width: 76rpx;
+  height: 27rpx;
+  border: 1px solid #EDAC10;
+  border-radius: 4rpx;
+}
+.labelInfo .label_icon03{
+  width: 123rpx;
+  height: 27rpx;
+  border: 1px solid #EDAC10;
+  border-radius: 4rpx;
+}
+.labelInfo .label_icon04{
+  width: 150rpx;
+  height: 27rpx;
+  border: 1px solid #EDAC10;
+  border-radius: 4rpx;
+}
+.getCard{
+  margin-top: 20rpx;
+  background: #333333;
+  padding: 0 15px;
+}
+.shoptit{
+  border-bottom:1rpx solid #242424;
+  padding:28rpx 0 28rpx 0;
+  line-height: 22rpx;
+}
+.shoptit .more{
+  display: inline-block
+}
+.shoptit .more text{
+  font-size: 26rpx;
+  color: #3598DB;
+}
+.shoptit .more image{
+  width: 9rpx;
+  height: 16rpx;
+  padding-left: 8rpx;
+}
+.shoptit .h4{
+  font-size: 32rpx;
+  height: 25rpx;
+  color: #EDAC10;
+  position: relative;
+  padding-left:20rpx;
+  font-weight: bold;
+
+}
+.h4::before{
+  content:"";
+  border-left: 5rpx solid #58D68D;
+  display: inline-block;
+  height: 25rpx;
+  position: absolute;
+  left:0;
+}
+.getCinfo{
+  padding-top: 20rpx;
+  padding-bottom: 16rpx;
+}
+.getCard .getCinfo .getCimg{
+  width: 241rpx;
+  height: 144rpx;
+  border-radius: 10rpx;
+}
+.getCard .getCinfo .getCdetail{
+  margin-top: -30rpx;
+}
+.getCard .getCinfo .getCdetail text{
+  font-size: 32rpx;
+  color: #DBDBDB;
+}
+.getCard .getCinfo .getCdetail{
+  text-align: right;
+}
+.getCard .getCinfo .getCdetail button{
+  margin-top: 40rpx;
+  margin-right: 0rpx;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  font-size: 32rpx;
+  width: 150rpx;
+  /* height: 46rpx; */
+  line-height: 46rpx;
+  border-radius: 6rpx;
+  text-align: center;
+  background: none;
+}
+.discount{
+  margin-top: 20rpx;
+  padding: 24rpx 18rpx 24rpx 15rpx;
+  background: #333;
+}
+.discount image{
+  width: 269rpx;
+  height: 38rpx;
+  margin-top: 6rpx;
+}
+.discount button{
+  color: #333333;
+  font-size: 32rpx;
+  width: 150rpx;
+  /* height: 46rpx; */
+  line-height: 56rpx;
+  border-radius: 6rpx;
+  text-align: center;
+  /* background:#F1C40F; */
+}
+.discounts{
+  margin-top: 20rpx;
+  padding: 0 18rpx 24rpx 15rpx;
+  background: #333;
+}
+.purchase{
+  margin-top: 20rpx;
+  background: #333333;
+  padding: 0 20rpx;
+}
+.purchase .purchaseInfo{
+  padding-top: 40rpx;
+}
+.purchase .purchaseAll{
+  padding:0 0 46rpx 0;
+}
+.purchaseInfo .right_grey_icon{
+  width: 16rpx;
+  height: 32rpx;
+  position: absolute;
+  right: 0;
+  bottom: 30rpx;
+}
+.purchaseInfo .purchaseImg{
+  width: 240rpx;
+  height: 172rpx;
+}
+.purchaseInfo .purchaseDetail{
+  position: relative;
+  padding-left: 20rpx;
+}
+.purchaseInfo .purchaseDetail .purchaseTit{
+  margin-bottom: 40rpx;
+  color: #DBDBDB;
+  font-size: 32rpx;
+}
+.purchaseInfo .purchaseDetail .purchasePep{
+  margin-top: 18rpx;
+  color: #9B9B9B;
+  font-size: 28rpx;
+}
+.purchaseInfo .purchaseDetail .price{
+  font-weight: 600;
+  color: #F93C03;
+  font-size: 28rpx;
+  margin-top: 4rpx;
+}
+.purchaseInfo .purchaseDetail .originalPrice{
+  padding-left: 8rpx;
+  font-weight: 500;
+  font-size: 20rpx;
+  text-decoration:line-through ;
+}
+.discountsInfo{
+  margin-top: 40rpx;
+}
+.discountsInfo .voucher,.discountsInfo .discountInfo,.discountsInfo .coupon{
+  margin-bottom: 10rpx;  
+  position: relative;
+}
+.discountsInfo .voucher .voucher_background,.discountsInfo .discountInfo .voucher_background,.discountsInfo .coupon .voucher_background{
+  width: 713rpx;
+  height: 212rpx;
+}
+.discountsInfo .voucher .voucherPos,.discountsInfo .discountInfo .discountPos,.discountsInfo .coupon .couponPos{
+  position: absolute;
+  bottom: 26rpx;
+  left: 32rpx;
+  width: 620rpx;
+}
+.voucherInfo{
+  color: #39393B;
+  /* font-size: 24rpx; */
+  width: 440rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  font-size: 36rpx;
+}
+.couponInfo{
+  font-size: 36rpx;
+}
+.discountInfoss{
+  color: #39393B;
+  /* font-size: 24rpx; */
+  width: 440rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  font-size: 36rpx;
+}
+.voucherState .voucherPrice{
+  color: #846839;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.discountState .discountPrice{
+  color: #846839;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.couponState .couponPrice{
+  color: #846839;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.voucherState button.receive{
+  display: inline-block;
+  color: #fff;
+  font-size: 32rpx;
+  width: 160rpx;
+  height: 46rpx;
+  line-height: 46rpx;
+  border-radius:20px;
+  text-align: center;
+  background:#846839;
+  position: absolute;
+  right: 0rpx;
+}
+.voucherState button.AlreadyReceive{
+  display: inline-block;
+  color: #846839;
+  font-size: 32rpx;
+  width: 160rpx;
+  /* height: 46rpx; */
+  line-height: 46rpx;
+  border-radius:20px;
+  text-align: center;
+  border:#846839 1px solid;
+  position: absolute;
+  right: 0rpx;
+  background: rgba(255,255,255,.1);
+}
+.discountState button{
+  display: inline-block;
+  color: #fff;
+  font-size: 32rpx;
+  width: 160rpx;
+  /* height: 46rpx; */
+  line-height: 46rpx;
+  border-radius:20px;
+  text-align: center;
+  background:#846839;
+  position: absolute;
+  right: 0rpx;
+}
+.couponState button{
+  display: inline-block;
+  color: #fff;
+  font-size: 32rpx;
+  width: 160rpx;
+  /* height: 46rpx; */
+  line-height: 46rpx;
+  border-radius:20px;
+  text-align: center;
+  background:#846839;
+  position: absolute;
+  right: 0rpx;
+}
+.serve{
+  margin-top: 20rpx;
+  padding: 0 18rpx 10rpx 15rpx;
+  background: #333333;
+}
+.serveAll{
+  margin-top: 40rpx;
+}
+.serveAll .serveInfo{
+  position: relative;
+  margin-bottom: 24rpx;
+  width: 710rpx;
+  height: 340rpx; 
+}
+.serveAll .serveInfo .serve_background{
+  width: 100%;
+  height: 100%; 
+}
+.serveAll .serveInfo .serveDetail{
+  position: absolute;
+  background: rgba(0,0,0,.5);
+  width: 280rpx;
+  height: 180rpx;
+  border-radius: 10rpx;
+  top: 50rpx;
+  right: 50rpx;
+  padding:30rpx 24rpx 30rpx 24rpx;
+}
+.serveAll .serveInfo .serveDe{
+  position: absolute;
+  background: rgba(0,0,0,.5);
+  width: 280rpx;
+  height: 180rpx;
+  border-radius: 10rpx;
+  top: 50rpx;
+  left: 50rpx;
+  padding:30rpx 24rpx 30rpx 24rpx;
+}
+.serveAll .serveTit{
+  font-size: 32rpx;
+  color: #fff;
+  font-weight: bold;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.serveAll .servePrice{
+  font-size: 28rpx;
+  color: #FF3939;
+  font-weight: 700;
+}
+.serveAll .servePrice .originalPrice{
+  padding-left: 8rpx;
+  font-size: 24rpx;
+  font-weight: 500;
+  text-decoration:line-through ;
+}
+.serveAll .serveIntro{
+  font-size: 28rpx;
+  color: #DBDBDB;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.merchant{
+  margin-top: 20rpx;
+  padding: 0 18rpx 40rpx 15rpx;
+  background: #333333;
+  /* height: 450rpx; */
+}
+.merchant .merchantDetail{
+  margin-top: 40rpx;
+}
+.merchant .merchantImg{
+  width: 240rpx;
+  height:190rpx;
+  margin-bottom: 14rpx;
+}
+.merchant .img{
+   width: 240rpx;
+  height:190rpx;
+}
+.merchant .merchantInfo{
+  font-size: 28rpx;
+  color: #DBDBDB;
+  /* font-weight: bold; */
+  margin-top: 18rpx;
+  line-height: 36rpx;
+  /* height: 160rpx; */
+  word-wrap: break-word;word-break: break-all;overflow: hidden;
+
+}
+/*美容没发 */
+#pink { width: 100%;
+  background-color: #F5F5F5;}
+.shopDetailpink{background: #fff; padding:30rpx 15rpx;}
+.shopDetailpink .dark{display: none;}
+.shopDetailpink .yellow{display: none;}
+.shopDetailpink .shopTitle text{color: #333;}
+.shopDetailpink .shopMtit{ color: #666666;}
+.shopDetailpink .shopTime text{color: #666666;}
+.labelInfopink .label_icon1{ border: 1px solid #FF7F91;color:#FF7F91; }
+.discountpink{margin-top: 20rpx; padding: 24rpx 18rpx 24rpx 15rpx; background: #fff;}
+.discountpink image{ width: 269rpx; height: 38rpx; margin-top: 6rpx;}
+.discountpink .dark{display: none;}
+.discountpink .yellow{display: none;}
+.discountpink button{ color: #fff; font-size: 32rpx; width: 150rpx;
+  /* height: 46rpx; */ line-height: 56rpx; border-radius: 6rpx; text-align: center;  background:#FF5E71;}
+.purchasepink{ margin-top: 20rpx; background: #fff; padding: 0 20rpx;}
+.purchasepink .purchaseInfo{ padding-top: 40rpx;}
+.purchasepink .purchaseAll{padding:0 0 46rpx 0;}
+.purchasepink .purchaseInfo .right_grey_icon{ width: 16rpx;height: 32rpx; position: absolute; right: 0; bottom: 30rpx;}
+.purchasepink .purchaseInfo .purchaseImg{ width: 240rpx;height: 172rpx;}
+.purchasepink .purchaseInfo .purchaseDetail{ position: relative; padding-left: 20rpx;}
+.purchasepink .purchaseInfo .purchaseDetail .purchaseTit{ margin-bottom: 40rpx;
+  color: #29273A; font-size: 32rpx;}
+.purchasepink .purchaseInfo .purchaseDetail .purchasePep{ margin-top: 18rpx;
+  color: #9B9B9B;font-size: 28rpx;}
+.purchasepink .purchaseInfo .purchaseDetail .price{
+  font-weight: 600; color: #F93C03; font-size: 28rpx; margin-top: 4rpx;}
+.purchasepink .purchaseInfo .purchaseDetail .originalPrice{
+  padding-left: 8rpx; font-weight: 500; font-size: 20rpx; text-decoration:line-through ;}
+#pink .shoptit{
+  border-bottom:1rpx solid #DCDCDC; padding:28rpx 0 28rpx 0; line-height: 22rpx;}
+#pink .shoptit .more{ display: inline-block}
+#pink .shoptit .more text{ font-size: 26rpx;color: #3598DB;}
+#pink .shoptit .more image{width: 9rpx; height: 16rpx; padding-left: 8rpx;}
+#pink .shoptit .h4{font-size: 32rpx; height: 25rpx; color: #29273A;
+  position: relative; padding-left:20rpx;font-weight: bold;}
+#pink .h4::before{
+  content:""; border-left: 5rpx solid #B4A183;
+  display: inline-block; height: 25rpx; position: absolute; left:0;}
+#pink  .discounts{
+  margin-top: 20rpx;padding: 0 18rpx 24rpx 15rpx;background: #fff;}
+#pink  .serve{ margin-top: 20rpx; padding: 0 18rpx 10rpx 15rpx; background: #fff;}
+#pink  .merchant{ margin-top: 20rpx;padding: 0 18rpx 40rpx 15rpx; background: #fff;}
+
+#pink .discountsInfo .yellow{display: none;}
+#pink .discountsInfo .dark{display: none;}
+#pink .voucherState .voucherPrice{color: #9B62FF;}
+#pink .voucherState button.receive{background:#9B62FF; }
+#pink .couponState .couponPrice{color: #AE5DA1;}
+#pink .couponState button{background:#AE5DA1; }
+#pink .discountState .discountPrice{color: #FF5E71;}
+#pink .discountState button{background:#FF5E71; }
+#pink .merchant .merchantInfo{color: #666;}
+
+#pink .getCardpink{ margin-top: 20rpx; background: #fff;padding: 0 15px;}
+#pink .getCardpink .getCinfo .getCimg{width: 241rpx; height: 144rpx; border-radius: 10rpx;}
+#pink .getCardpink .getCinfo .getCdetail{ margin-top: -30rpx;}
+#pink .getCardpink .getCinfo .getCdetail text{ font-size: 32rpx;color: #333333;}
+#pink .getCardpink .getCinfo .getCdetail{ text-align: right;}
+#pink .getCardpink .getCinfo .getCdetail button{
+  margin-top: 40rpx; margin-right: 0rpx;border: 1px solid #937A52; color: #937A52;
+  font-size: 32rpx; width: 150rpx;
+  /* height: 46rpx; */ line-height: 46rpx; border-radius: 6rpx;
+  text-align: center; background: none;}
+
+/* 早教 */
+#yellow{ width: 100%;background-color: #F5F5F5;}
+.shopDetailyellow .dark{display: none;}
+.shopDetailyellow .pink{display: none;}
+.shopDetailyellow .shopTitle text  {color: #333;}
+.shopDetailyellow .shopMtit{ color: #666666;}
+.shopDetailyellow .shopTime text{color: #666666;}
+.discountyellow .dark,.discountyellow .pink{display: none;}
+.discountyellow{margin-top: 20rpx; padding: 24rpx 18rpx 24rpx 15rpx; background: #fff;}
+.discountyellow image{ width: 269rpx; height: 38rpx; margin-top: 6rpx;}
+.discountyellow button{ color: #fff; font-size: 32rpx; width: 150rpx;
+  /* height: 46rpx; */ line-height: 56rpx; border-radius: 6rpx; text-align: center;  background:#F1C40F;}
+.shopDetailyellow{background: #fff; padding:30rpx 15rpx;}
+.purchaseyellow{ margin-top: 20rpx; background: #fff; padding: 0 20rpx;}
+.discountyellow button{ color: #fff; font-size: 32rpx; width: 150rpx;
+  /* height: 46rpx; */ line-height: 56rpx; border-radius: 6rpx; text-align: center;  background:#F1C40F;}
+.purchaseyellow{ margin-top: 20rpx; background: #fff; padding: 0 20rpx;}
+.purchaseyellow .purchaseInfo{ padding-top: 40rpx;}
+.purchaseyellow .purchaseAll{padding:0 0 46rpx 0;}
+.purchaseyellow .purchaseInfo .right_grey_icon{ width: 16rpx;height: 32rpx; position: absolute; right: 0; bottom: 30rpx;}
+.purchaseyellow .purchaseInfo .purchaseImg{ width: 240rpx;height: 172rpx;}
+.purchaseyellow .purchaseInfo .purchaseDetail{ position: relative; padding-left: 20rpx;}
+.purchaseyellow .purchaseInfo .purchaseDetail .purchaseTit{ margin-bottom: 40rpx;
+  color: #29273A; font-size: 32rpx;}
+.purchaseyellow .purchaseInfo .purchaseDetail .purchasePep{ margin-top: 18rpx;
+  color: #9B9B9B;font-size: 28rpx;}
+.purchaseyellow .purchaseInfo .purchaseDetail .price{
+  font-weight: 600; color: #F93C03; font-size: 28rpx; margin-top: 4rpx;}
+.purchaseyellow .purchaseInfo .purchaseDetail .originalPrice{
+  padding-left: 8rpx; font-weight: 500; font-size: 20rpx; text-decoration:line-through ;}
+#yellow .shoptit{
+  border-bottom:1rpx solid #DCDCDC; padding:28rpx 0 28rpx 0; line-height: 22rpx;}
+#yellow .shoptit .more{ display: inline-block}
+#yellow .shoptit .more text{ font-size: 26rpx;color: #3598DB;}
+#yellow .shoptit .more image{width: 9rpx; height: 16rpx; padding-left: 8rpx;}
+#yellow .shoptit .h4{font-size: 32rpx; height: 25rpx; color: #29273A;
+  position: relative; padding-left:20rpx;font-weight: bold;}
+#yellow .h4::before{
+  content:""; border-left: 5rpx solid #58D68D;
+  display: inline-block; height: 25rpx; position: absolute; left:0;}
+#yellow  .discounts{
+  margin-top: 20rpx;padding: 0 18rpx 24rpx 15rpx;background: #fff;}
+#yellow  .serve{ margin-top: 20rpx; padding: 0 18rpx 10rpx 15rpx; background: #fff;}
+#yellow  .merchant{ margin-top: 20rpx;padding: 0 18rpx 40rpx 15rpx; background: #fff;}
+
+#yellow .discountsInfo .pink{display: none;}
+#yellow .discountsInfo .dark{display: none;}
+#yellow .voucherState .voucherPrice{color: #F1C40F;}
+#yellow .voucherState button.receive{background:#F1C40F; }
+#yellow .couponState .couponPrice{color: #3598DB;}
+#yellow .couponState button{background:#3598DB; }
+#yellow .discountState .discountPrice{color: #F39C11;}
+#yellow .discountState button{background:#F39C11; }
+#yellow .merchant .merchantInfo{color: #666;}
+
+
+#yellow .getCardyellow{ margin-top: 20rpx; background: #fff;padding: 0 15px;}
+#yellow .getCardyellow .getCinfo .getCimg{width: 241rpx; height: 144rpx; border-radius: 10rpx;}
+#yellow .getCardyellow .getCinfo .getCdetail{ margin-top: -30rpx;}
+#yellow .getCardyellow .getCinfo .getCdetail text{ font-size: 32rpx;color: #333333;}
+#yellow .getCardyellow .getCinfo .getCdetail{ text-align: right;}
+#yellow .getCardyellow .getCinfo .getCdetail button{
+  margin-top: 40rpx; margin-right: 0rpx;border: 1px solid #3598DB; color: #3598DB;
+  font-size: 32rpx; width: 150rpx;
+  /* height: 46rpx; */ line-height: 46rpx; border-radius: 6rpx;
+  text-align: center; background: none;}
+
+
+/* 健身 */
+#dark { width: 100%; background-color: #242424;}
+.shopDetaildark .yellow{display: none;}
+.shopDetaildark .pink{display: none;}
+.discountdark .yellow,.discountdark .pink{display: none;}
+.discountdark{margin-top: 20rpx; padding: 24rpx 18rpx 24rpx 15rpx; background: #303030;}
+.discountdark image{ width: 269rpx; height: 38rpx; margin-top: 6rpx;}
+.discountdark button{ color: #333333; font-size: 32rpx; width: 150rpx;
+  /* height: 46rpx; */ line-height: 56rpx; border-radius: 6rpx; text-align: center;  background:#F1C40F;}
+.purchasedark{ margin-top: 20rpx; background: #303030; padding: 0 20rpx;}
+.discountdark button{ color: #333333; font-size: 32rpx; width: 150rpx;
+  /* height: 46rpx; */ line-height: 56rpx; border-radius: 6rpx; text-align: center;  background:#F1C40F;}
+.purchasedark{ margin-top: 20rpx; background: #303030; padding: 0 20rpx;}
+.purchasedark .purchaseInfo{ padding-top: 40rpx;}
+.purchasedark .purchaseAll{padding:0 0 46rpx 0;}
+.purchasedark .purchaseInfo .right_grey_icon{ width: 16rpx;height: 32rpx; position: absolute; right: 0; bottom: 30rpx;}
+.purchasedark .purchaseInfo .purchaseImg{ width: 240rpx;height: 172rpx;}
+.purchasedark .purchaseInfo .purchaseDetail{ position: relative; padding-left: 20rpx;}
+.purchasedark .purchaseInfo .purchaseDetail .purchaseTit{ margin-bottom: 40rpx;
+  color: #DBDBDB; font-size: 32rpx;}
+.purchasedark .purchaseInfo .purchaseDetail .purchasePep{ margin-top: 18rpx;
+  color: #9B9B9B;font-size: 28rpx;}
+.purchasedark .purchaseInfo .purchaseDetail .price{
+  font-weight: 600; color: #F93C03; font-size: 28rpx; margin-top: 4rpx;}
+.purchasedark .purchaseInfo .purchaseDetail .originalPrice{
+  padding-left: 8rpx; font-weight: 500; font-size: 20rpx; text-decoration:line-through ;}
+#dark .shoptit{
+  border-bottom:1rpx solid #242424; padding:28rpx 0 28rpx 0; line-height: 22rpx;}
+#dark .shoptit .more{ display: inline-block}
+#dark .shoptit .more text{ font-size: 26rpx;color: #3598DB;}
+#dark .shoptit .more image{width: 9rpx; height: 16rpx; padding-left: 8rpx;}
+#dark .shoptit .h4{font-size: 32rpx; height: 25rpx; color: #EDAC10;
+  position: relative; padding-left:20rpx;font-weight: bold;}
+#dark .h4::before{
+  content:""; border-left: 5rpx solid #FF4A02;
+  display: inline-block; height: 25rpx; position: absolute; left:0;}
+#dark  .discounts{
+  margin-top: 20rpx;padding: 0 18rpx 24rpx 15rpx;background: #303030;}
+#dark  .serve{ margin-top: 20rpx; padding: 0 18rpx 10rpx 15rpx; background: #303030;}
+#dark  .merchant{ margin-top: 20rpx;padding: 0 18rpx 40rpx 15rpx; background: #303030;}
+
+#dark .discountsInfo .pink{display: none;}
+#dark .discountsInfo .yellow{display: none;}
+#dark .getCarddark{ margin-top: 20rpx; background: #333333;padding: 0 15px;}
+#dark .getCarddark .getCinfo .getCimg{width: 241rpx; height: 144rpx; border-radius: 10rpx;}
+#dark .getCarddark .getCinfo .getCdetail{ margin-top: -30rpx;}
+#dark .getCarddark .getCinfo .getCdetail text{ font-size: 32rpx;color: #DBDBDB;}
+#dark .getCarddark .getCinfo .getCdetail{ text-align: right;}
+#dark .getCarddark .getCinfo .getCdetail button{
+  margin-top: 40rpx; margin-right: 0rpx;border: 1px solid #FFFFFF; color: #FFFFFF;
+  font-size: 32rpx; width: 150rpx;
+  /* height: 46rpx; */ line-height: 46rpx; border-radius: 6rpx;
+  text-align: center; background: none;}

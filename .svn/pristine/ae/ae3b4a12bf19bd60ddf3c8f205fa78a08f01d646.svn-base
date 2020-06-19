@@ -1,0 +1,114 @@
+/* pages/share/share.wxss */
+page{
+  background: #F5F5F5;
+  /* margin-top: 40rpx; */
+}
+.shareDetail{
+  width: 750rpx;
+  height: 1206rpx;
+  overflow: hidden;
+}
+.share_bg{
+  text-align: center;
+  position: relative;
+}
+.share_bg image{
+  width: 750rpx;
+  height: 1334rpx;
+  margin-top: -128rpx;
+}
+.share_info{
+  position: absolute;
+  top: 300rpx;
+  width: 750rpx;
+}
+.h2{
+  font-size: 50rpx;
+  font-weight: bold;
+  color: #493018;
+  text-align: center;
+  width: 600rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  margin: 0 auto;
+}
+.info{
+  height: 130rpx;
+  font-size: 24rpx;
+  color: #493018;
+  width:570rpx;
+  margin: 60rpx auto 0 auto;
+  text-indent: 60rpx;
+  padding:12rpx 12rpx;
+  box-sizing: border-box;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-align: left;
+  line-height: 40rpx;
+}
+.code{
+  width: 270rpx;
+  height: 270rpx;
+  border: 2rpx solid #D3D3D3;
+  left: 50%;
+  position: absolute;
+  margin-left: -120rpx;
+  top: 320rpx;
+}
+.code image{
+  width: 240rpx;
+  height: 240rpx;
+  margin-top: 12rpx;
+}
+.code_info{
+  font-size: 28rpx;
+  color: #493018;
+  margin-top: 340rpx;
+}
+.code_info text{
+  display: block;
+}
+.imagePathBox{
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+.shengcheng{
+  width: 100%;
+  height: 1334rpx;
+  position: fixed;
+  /* top: 50rpx; */
+  left: 50%;
+  margin-left: -50%;
+  z-index: 10;
+  top: -128rpx;
+}
+.baocun{
+  z-index: 999;
+  width: 250rpx;
+  height: 86rpx;
+  background: #febb45;
+  color: #333;
+  line-height: 86rpx;
+  position: fixed;
+  font-size: 32rpx;
+  text-align: center;
+  left: 50%;
+  margin-left: -130rpx;
+  border-radius: 10rpx;
+  top: 1082rpx;
+}

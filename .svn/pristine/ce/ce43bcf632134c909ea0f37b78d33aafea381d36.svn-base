@@ -1,0 +1,90 @@
+<view class='coutitle flexbox flexcenter'>
+   <view class='flex {{act==5? "active":""}}' bindtap='typeChange' data-act="5">
+     团购券
+   </view>
+   <view class='flex pastDue {{act==4? "active":""}}' bindtap='typeChange' data-act="4">优惠券</view>
+</view>
+
+
+<!--选择优惠券-->
+<view class="prolist paddinglr {{nodata? 'hide':''}}" wx:if="{{coutype==4}}">
+   <block wx:for="{{coulog}}" wx:key="coulogId">
+      <view class='bblock'>
+              <image src='/images/discounts_img01.png' class='bimg' wx:if="{{item.coutype==1}}"></image>
+              <image src='/images/discounts_img02.png' class='bimg' wx:if="{{item.coutype==2}}"></image>
+              <image src='/images/discounts_img03.png' class='bimg' wx:if="{{item.coutype==4}}"></image>
+              <view class='flexbox flexcenter ccontnet'>
+                  <view class='flex'>
+                    <!-- <view class='pont ptitle'>
+                      <view class='ponname' wx:if="{{item.coutype==2}}">折扣券 </view>
+                      <view class='ponname' wx:if="{{item.coutype==1}}">代金券 </view>
+                      <view class='ponname' wx:if="{{item.coutype==4}}">兑换券 </view>
+                    </view> -->
+                    <view class="conText" wx:if="{{item.coutype==1}}">
+                      <text class='csmall' >￥</text>
+                      {{item.couamount}}
+                    </view>
+                    <view class="conText czhe" wx:if="{{item.coutype==2}}">
+                      {{item.discountrate}}<text class='csmall'>折</text>
+                    </view>
+                    <view class="conText cdui" wx:if="{{item.coutype==4}}">
+                      <text class='csmall'>{{item.giftname}}</text>
+                    </view>
+                 </view>
+                   <view class='cright'>
+                      <text class='tname'>{{item.couname}}</text>
+                      <text class='pont pred'>{{item.cougetlimit}}</text>
+                      <button type="default" wx:if="{{item.coutype==2}}" class='smallbtn gooduse zhe' data-ticketid="{{item.ticketid}}" data-couamount="{{item.couamount}}" bindtap='toUse'>选择 </button>
+                      <button type="default" wx:if="{{item.coutype==4}}" class='smallbtn gooduse dui' data-ticketid="{{item.ticketid}}" data-couamount="{{item.couamount}}" bindtap='toUse'>选择 </button>
+                      <button type="default" wx:if="{{item.coutype==1}}" class='smallbtn gooduse ' data-ticketid="{{item.ticketid}}" data-couamount="{{item.couamount}}" bindtap='toUse'>选择 </button>
+                  </view>
+              </view>
+        
+      </view>
+    </block>
+   <view class='dataOver {{ishide? "":"hide"}}'>{{statetip}}</view>
+</view>
+
+<!--选择团购券-->
+<view class="prolist padbottom paddinglr {{nodata? 'hide':''}}" wx:else>
+  <checkbox-group bindchange="checkboxChange" data-index="{{index}}" checked="{{item.checked}}">
+  <block wx:for="{{goulog}}"  wx:key="{{goulogId}}" wx:for-index="index">
+    <view class="conblock paddinglr">
+        <view class='chtop flexbox'>
+          <view class='chbox'>
+           <image wx:if="{{item.coupic=='/static/images/business/daijin.jpg'}}" src='/images/pic.png' class='chimg'></image>
+           <image wx:else src='{{item.coupic}}' class='chimg'></image>
+            <text class='icont'>团</text>
+          </view>
+          <view class='flex chcon'>
+              <text class='chname'>{{item.couname}}</text>
+              <text class='chtime'>有效期至：{{item.expirydate}}</text>
+              <text class='chamount charight'>数量：{{item.buynum}}</text>
+              <text class='chamount'>单价：{{item.buyamount}}元</text>
+          </view>
+        </view>
+        <view class='chbtn flexcenter flexbox'>
+          
+          <view >实付：{{item.buyamount*item.buynum}}元</view>
+          <view class='ch_btns flex'>
+              <!-- <button wx-if="{{item.ostatus==2 && item.relOstatus==0}}" data-ucid='{{item.ucid}}' bindtap='consume' class='btn buse' type='default'>去使用</button> -->
+             
+                <label class="checkbox" >
+                  <checkbox value="{{item.ticketid}},{{item.couamount}},{{index}},{{item.dcode}}"  checked="{{item.checked}}" data-index="{{index}}" />
+                </label>
+              
+          </view>
+        </view>
+    </view>
+  </block>
+   </checkbox-group>
+  <view class='dataOver {{ishide? "":"hide"}}'>{{statetip}}</view>
+    <view class='btnbox paddinglr'>
+      <button class='btn-common' type='default' bindtap='useGrou'>{{chooseText}}</button>
+    </view>
+</view>
+
+
+
+
+<image class="nodata {{nodata? '':'hide'}}" src="/images/noData.png"></image>

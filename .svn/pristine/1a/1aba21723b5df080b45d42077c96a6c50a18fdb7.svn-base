@@ -1,0 +1,57 @@
+<view class='page' id='{{skinStyle}}'>
+<view class="header">
+   <image wx:if="{{shopmess.logopicsrc==''}}" src="{{shopmess.logopicsrc}}" class='shopimg'></image>
+   <image src="{{shopmess.logopicsrc}}" class='shopimg'></image>
+   <view class='shopmess'>
+      <text class='shopname'>{{shopmess.shopname}}</text>
+      <text class='shoptype'>\n邮储银行特约商户 </text>
+   </view>
+</view>
+
+<view class='main paddinglr'>
+   <view class='minput flexbox flexcenter'>
+       <text class='price'>消费金额(元)</text>
+       <input  type="digit" bindinput="bindPay"  style="font-size:36rpx;" value="{{PayNumber}}" placeholder-class="phcolor" placeholder="询问服务员后输入" bindfocus="activeFocus" focus="{{autoFocus}}" bindblur="resignFocus" bindconfirm='resignFocus'  class='flex mpinput'/>
+   </view>
+   <view class='instructions'>请在店员的指引下完成支付</view>
+   <view class='mdown {{isShow? "":"hide"}}' bindtap='importNon'>
+      <image src='/images/down.png' class='mdimg'></image>下拉输入更多 
+   </view>
+   <view class='minput flexbox flexcenter {{isShow? "hide":""}}'>
+       <text class='price'>不参与优惠金额(元)</text>
+       <input  type="digit" value="{{nonPay}}" bindinput="bindKeyInput" placeholder-class="phcolor" placeholder="询问服务员后输入"  focus="{{autoFocuss}}" bindfocus="activeFocuss" bindblur="resignFocuss" bindconfirm='resignFocuss'  class='flex mpinput'/>
+   </view>
+  <view class='remark flexbox flexcenter {{isShow? "hide":""}}'>
+     <text class=' remarkInfo'>备注</text>
+      <!-- <input  type="text"  value="{{remarkInfo}}" bindinput="bindRemark" placeholder="如包房号、服务员号等" class='flex mpinpu'/> -->
+      <input  type="text"  value="{{remarkInfo}}" bindinput="inputVal" placeholder="如包房号、服务员号等" class='flex mpinpu'   maxlength="25"   />
+  </view>
+</view>
+
+<view class='maincoupon paddinglr'>
+  <view class='tit'>店主优惠</view>
+   <view class='coublock flexbox flexcenter' bindtap='chooseCoupon'>
+       <view class='flex couname'>选择优惠券/团购券
+        <text class="righttext" >{{backmessa}}</text>
+       <!-- <text class="righttext" wx:if="{{backmessa.length==1||backmessa.length==0}}">{{backmessa}}</text> -->
+        <!-- <text class="righttext" wx:else>已选择团购券 {{backmessa.length}} 张</text> -->
+       <text wx:if="{{hasTicket==true}}" class='icon'></text></view>
+       <image src='/images/right_grey.png' class='couright'></image>
+   </view>
+   <view class='discount'>
+      <!-- 为您优惠了<text class='disprice'>{{discount}}</text>元 -->
+   </view>
+   <!-- <view class='coublock flexbox flexcenter'>
+       <image src='/images/p_gou.png' class='couimg'></image>
+       <view class='flex couname'>团购券<text class='icon'></text></view>
+       <image src='/images/right_grey.png' class='couright'></image>
+   </view> -->
+</view>
+
+<view class='footer paddinglr'>
+   <view class='sumPrice' bindtap='ispayMoney'>实付金额：<text class='mred'>{{truePayNumber}}</text></view>
+   <view class='ftip'>安全提示：请在商家线下消费后再支付。如有疑问请致电
+邮惠付全国热线电话：400-900-1276</view>
+</view>
+
+</view>

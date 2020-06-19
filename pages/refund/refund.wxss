@@ -1,0 +1,146 @@
+.conmainspc{
+  background:#333;
+  border-top: 20rpx solid #242424;
+  padding-bottom: 20rpx;
+}
+.conmain{
+    background: #333;
+      margin-top: 20rpx;
+}
+.cmtopspc{
+    padding: 5rpx 0 35rpx 0;
+}
+
+.conmain{
+  background: #333;
+  margin-top: 20rpx;
+}
+.cmtopspc{
+  padding: 8rpx 0 8rpx 0;
+  color: #C2C2C2;
+}
+.cmtop{
+  padding: 40rpx 0 30rpx 0;
+  color: #C2C2C2;
+  border-bottom: 1rpx solid #242424;
+}
+.origin{
+  padding:35rpx 0;
+  color: #919191;
+}
+.cmbtn{
+  padding: 35rpx 0;
+  color: #C2C2C2;
+}
+.tright{
+  text-align:right;
+  color: #C2C2C2;
+}
+.cmlist{
+  line-height: 50rpx;
+}
+.orange{
+  color:#FEBB45;
+  font-size: 28rpx;
+  padding-top:20rpx;
+}
+.tbla{
+  color:#545454;
+}
+.red{
+  color:#ff3939;
+}
+.checkbox{
+  display: block;
+  color:#C2C2C2;
+  line-height: 56rpx;
+  font-size: 30rpx;
+}
+checkbox .wx-checkbox-input{
+   border-radius: 50%;
+   width: 25rpx;
+   height: 25rpx;
+   color:#989ca2;
+   background: none;
+}
+checkbox{
+  position:relative;
+  top:-2rpx;
+  margin-right: -6rpx;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+   border-color: #EDAC10;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+   border-radius: 50%;
+   width: 20rpx;
+   height: 20rpx;
+   line-height: 22rpx;
+   text-align: center;
+   font-size:18rpx;
+   color:#EDAC10;
+   background: none;
+   transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);
+}
+.btnbox{
+  padding-bottom: 30rpx;
+  color: #333;
+}
+/* .fal .wx-checkbox-input.wx-checkbox-input-checked{
+   border-color: #989ca2;
+}
+.fal .wx-checkbox-input.wx-checkbox-input-checked::before{
+   color:#989ca2;
+} */
+
+/*美容没发 */
+#pink { width: 100%; background-color: #f6f6f6;height: 100%;}
+#pink .conmainspc {background:#fff;border-top:20rpx solid #f6f6f6;
+padding-bottom:20rpx;}
+#pink .orange{color: #FF5E71;}
+#pink .red{color: #FF5E71;}
+#pink .otright{color: #919191;} 
+#pink .conmain {background:#fff;}
+#pink .cmtop{color: #989CA2;border-bottom: 1px solid #D8D8D8;}
+#pink .cmtopspc{color: #5A5A5A;}
+#pink .tright {color: #919191;}
+#pink .cmbtn{color: #545454;}
+#pink .btn-common{background: #FF5E71;color: #fff;}
+#pink .checkbox{display: block; color:#545454; line-height: 56rpx;font-size: 30rpx;}
+#pink checkbox .wx-checkbox-input{ border-radius: 50%;  width: 25rpx; height: 25rpx;color:#9ca0a6;background: none;}
+#pink  checkbox .wx-checkbox-input.wx-checkbox-input-checked{  border-color: #070707;}
+#pink  checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+   border-radius: 50%; width: 20rpx; height: 20rpx; line-height: 22rpx;
+   text-align: center; font-size:18rpx;  color:#070707; background: none;
+   transform:translate(-50%, -50%) scale(1); -webkit-transform:translate(-50%, -50%) scale(1);
+}
+#pink .btnbox {background:#f6f6f6; padding-top: 30rpx;padding-bottom: 60rpx;}
+
+/*早教 */
+#yellow { width: 100%; background-color: #f6f6f6;height: 100%;}
+#yellow .conmainspc {background:#fff;border-top:20rpx solid #f6f6f6;
+padding-bottom:20rpx;}
+#yellow .orange{color: #FEBB45;}
+#yellow .red{color: #FF5E71;}
+#yellow .otright{color: #919191;} 
+#yellow .conmain {background:#fff;}
+#yellow .cmtop{color: #989CA2;border-bottom: 1px solid #D8D8D8;}
+#yellow .cmtopspc{color: #5A5A5A;}
+#yellow .tright {color: #919191;}
+#yellow .cmbtn{color: #545454;}
+#yellow .btn-common{background: #FEBB45;color: #fff;}
+#yellow .checkbox{display: block; color:#545454; line-height: 56rpx;font-size: 30rpx;}
+#yellow checkbox .wx-checkbox-input{ border-radius: 50%;  width: 25rpx; height: 25rpx;color:#9ca0a6;background: none;}
+#yellow  checkbox .wx-checkbox-input.wx-checkbox-input-checked{  border-color: #070707;}
+#yellow  checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+   border-radius: 50%; width: 20rpx; height: 20rpx; line-height: 22rpx;
+   text-align: center; font-size:18rpx;  color:#070707; background: none;
+   transform:translate(-50%, -50%) scale(1); -webkit-transform:translate(-50%, -50%) scale(1);
+}
+#yellow .btnbox {background:#f6f6f6 ;padding-top: 30rpx;padding-bottom: 60rpx;}
+
+/*健身 */
+#dark { width: 100%; background-color: #242424;height: 100%;}
+#dark .btn-common{background: #EDAC10;color: #333333;}
+#dark .btnbox {background:#242424; padding-top: 30rpx;padding-bottom: 60rpx;}

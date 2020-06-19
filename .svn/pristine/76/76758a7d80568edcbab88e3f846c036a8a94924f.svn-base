@@ -1,0 +1,59 @@
+<view class='page' id='{{skinStyle}}'>
+<view class="conheader paddinglr">
+    <view class='chtop flexbox'>
+       <view class='chbox'>
+         <!-- <image src='/images/pic.png' class='chimg' wx:if="{{grouInfo.coupic=='/static/images/business/xianjin.png'}}"></image> -->
+          <image src='{{grouInfo.coupic}}' class='chimg' ></image>
+         <text class='icont'>团</text>
+       </view>
+       <view class='flex chcon'>
+          <text class='chname'>{{grouInfo.couname}}</text>
+          <text class='chtime'>有效期至：{{begintime}}</text>
+          <text class='chamount'>数量：{{grouInfo.buynum}}</text>
+       </view>
+    </view>
+    <view class='chbtn'>总金额：{{grouInfo.favoredmoney}}元</view>
+</view>
+
+<view class="conmain paddinglr">
+    <view class='cmtop flexbox'>
+        <view class='flex'>团购券</view>
+        <view class='flex tright'>有效期：{{begintime}}</view>
+    </view>
+    <view class='cmbtn flexbox' wx:for="{{grouInfo.codeInfo}}">
+        <view class='flex'>{{item.discountcode}}</view>
+        <view class='flex tright orange'>{{item.ostatus}}</view>
+    </view>
+</view>
+<view class="conmain paddinglr conmaind" wx:if="{{grouInfo.hasTrade}}">
+    <view class='cmtop flexbox'>
+        <view class='flex'>订单明细</view>
+    </view>
+    <view class='cmbtn'>
+        <view class='flexbox cmlist'>
+            <view class='flex'>下单时间</view>
+            <view class='flex tright tbla'>{{grouInfo.dealtime}}</view>
+        </view>
+        <view class='flexbox cmlist'>
+            <view class='flex'>手机号</view>
+            <view class='flex tright tbla'>{{grouInfo.payuphone}}</view>
+        </view>
+        <view class='flexbox cmlist'>
+            <view class='flex'>数量</view>
+            <view class='flex tright tbla'>{{grouInfo.buynum}}</view>
+        </view>
+        <view class='flexbox cmlist'>
+            <view class='flex'>总金额</view>
+            <view class='flex tright tbla red'>￥{{grouInfo.favoredmoney}}</view>
+        </view>
+        <view class='flexbox cmlist'>
+            <view class='flex'>备注</view>
+            <view class='flex tright tbla'>{{grouInfo.remark}}</view>
+        </view>
+        <view class='flexbox cmlist'>
+            <view class='flex'>支付方式</view>
+            <view class='flex tright tbla'>{{grouInfo.payname}}</view>
+        </view>
+    </view>
+</view>
+</view>

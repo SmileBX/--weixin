@@ -1,0 +1,74 @@
+<!--pages/chooseTicket/chooseTicket.wxml-->
+<view class='page' id='{{skinStyle}}'>
+
+<view class='header  flexbox flexcenter'>
+   <view class='flex li {{act==4? "active":""}}' bindtap='typeChange' data-act="4">优惠券</view>
+   <view class='flex li {{act==5? "active":""}}' bindtap='typeChange' data-act="5">团购券</view>
+</view>
+
+<view >
+  <view class='chooseTicket'>
+  <!-- 优惠券 -->
+    <view class="{{nodata? 'hide':''}}" wx:if="{{coutype==4}}" >
+        <view class='discountCou' >
+          <radio-group  bindchange="radioChange" >
+            <view  wx:for="{{coulog}}"  data-id="{{item.couname}}" bindtap = "bindtap1" data-index="{{index}}">
+              <label class="checkbox flexbox flexcenter">
+                <checkbox bindtap = "bindtap1"  value="{{item.ticketid}},{{item.couname}},{{item.coutype}},{{item.dcode}},{{item.couid}}"  checked="{{item.checked}}" data-index="{{index}}"   class='flex'/>
+                <view class='chooseInfo'>
+                  <image src='/images/choose_img01.png'  class='chooseInfo_img' wx:if="{{item.coutype==1}}"></image>
+                  <image src='/images/choose_img02.png' wx:if="{{item.coutype==2}}" class='chooseInfo_img'></image>
+                  <image src='/images/choose_img03.png' wx:if="{{item.coutype==4}}" class='chooseInfo_img'></image>
+                  <view class='chooseDetails'>
+                    <view class='tit'>{{item.couname}}</view>
+                    <view class='time'>有效期：{{item.expirydate}}</view>
+                    <view class='limit' wx:if="{{item.mincost==0}}">消费限制：无限制</view>
+                    <view class='limit' wx:else>消费限制：满{{item.mincost}}元可用</view>
+                  </view>
+                </view>
+              </label>
+            </view> 
+          </radio-group>
+        </view>  
+      <view class='dataOver {{ishide? "":"hide"}}'>{{statetip}}</view>
+    </view>    
+        <!-- 团购券 -->
+      <view class="{{nodata? 'hide':''}}" wx:else >  
+        <view class='groupCou'>
+          <checkbox-group bindchange="checkboxChange">
+            <label class="checkbox flexbox flexcenter" wx:for="{{goulog}}">
+              <checkbox value="{{item.ticketid}},{{item.couamount}},{{index}},{{item.dcode}},{{item.couname}},{{item.couid}}"  checked="{{item.checked}}" data-index="{{index}}" class='flex'/>
+              <view class='chooseInfo'>
+                <image src='/images/choose_img01.png'  class='chooseInfo_img'></image>
+                <!-- <image src='/images/choose_img02.png' wx:if="{{item.coutype==2}}" class='chooseInfo_img'></image> -->
+                <!-- <image src='/images/choose_img03.png' wx:if="{{item.coutype==3}}" class='chooseInfo_img'></image> -->
+                <view class='chooseDetails'>
+                  <view class='tit'>{{item.couname}}</view>
+                  <view class='time'>有效期：{{item.expirydate}}</view>
+                  <view class='limit' wx:if="{{item.mincost==0}}">消费限制：无限制</view>
+                  <view class='limit' wx:else>消费限制：满{{item.mincost}}元可用</view>
+                </view>
+              </view>
+            </label>
+          </checkbox-group>
+        </view>
+        <view class='dataOver {{ishide? "":"hide"}}'>{{statetip}}</view>
+      </view>  
+  </view>
+ </view> 
+
+<view  id='chooseTicket'>
+</view>
+
+<view class='footpox' >
+  <view  class='footer'> 
+  <!-- 优惠券 -->
+    <view class='sumPrice' bindtap='toUse' wx:if="{{coutype==4}}" data-id="{{item.couname}}">确认选择</view>
+    <view class='sumPrice' bindtap='useGrou' wx:if="{{coutype==5}}">确认选择</view>
+  </view>
+</view>
+
+
+<image class="nodata {{nodata? '':'hide'}}" src="/images/noData.png"></image>
+
+</view>

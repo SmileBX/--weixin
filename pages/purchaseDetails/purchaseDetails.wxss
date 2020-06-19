@@ -1,0 +1,289 @@
+/* pages/purchaseDetails/purchaseDetails.wxss */
+.banner{
+  width: 100%;
+  height: 100%;
+}
+.banner image{
+  width: 100%;
+  height: 320rpx;
+}
+.purchInfo{
+   padding:14rpx 15rpx;
+   background: #333333;
+   margin-top: -10rpx;
+}
+.purchInfo .h2{
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+.shopMap .shopMtit{
+  font-size: 28rpx;
+  color: #C2C2C2;
+  margin: 10rpx 0 10rpx 0;
+}
+.shopMap .shopMicon{
+  font-size: 24rpx;
+  color: #FF3939;
+}
+.shopMap .shopMicon .price{
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.shoptit{
+  border-bottom:1rpx solid #242424;
+  padding:28rpx 0 28rpx 0;
+  line-height: 22rpx;
+}
+.shoptit .more{
+  display: inline-block
+}
+.shoptit .more text{
+  font-size: 24rpx;
+  color: #3598DB;
+}
+.shoptit .more image{
+  width: 9rpx;
+  height: 16rpx;
+  padding-left: 8rpx;
+}
+.shoptit .h4{
+  font-size: 32rpx;
+  height: 25rpx;
+  color: #EDAC10;
+  position: relative;
+  padding-left:20rpx;
+  font-weight: 500;
+
+}
+.h4::before{
+  content:"";
+  border-left: 5rpx solid #FF4A02;
+  display: inline-block;
+  height: 25rpx;
+  position: absolute;
+  left:0;
+}
+.purchLable .purchLimg .label_icon06{
+  width: 76rpx;
+  height: 27rpx;
+  border: 1px solid #936822;
+  border-radius: 4rpx;
+}
+.purchLable .purchLimg .label_icon05{
+  width: 96rpx;
+  height: 27rpx;
+  margin-right: 10rpx;
+  border: 1px solid #936822;
+  border-radius: 4rpx;
+}
+.purchLable .purchLsell{
+  font-size: 26rpx;
+  color: #FEBB45;
+}
+.purchase{
+  margin-top: 20rpx;
+  background: #333333;
+  padding: 0 20rpx;
+}
+.purchase .purchaseInfo{
+  padding-top: 20rpx;
+}
+.purchase .purchaseAll{
+  padding:0 0 28rpx 0;
+}
+.purchaseAll .h2{
+  font-size: 32rpx;
+  color: #FFFEFE;
+  font-weight: bold;
+}
+.purchaseInfo .right_grey_icon{
+  width: 32rpx;
+  height: 32rpx;
+  position: absolute;
+  right: 0;
+  bottom: 30rpx;
+}
+.purchaseInfo .purchaseImg{
+  width: 240rpx;
+  height: 172rpx;
+}
+.purchaseInfo .purchaseDetail .purchaseTit{
+  color: #29273A;
+  font-size: 28rpx;
+}
+.purchaseInfo .purchaseDetail .purchasePep{
+  margin-top: 18rpx;
+  color: #9B9B9B;
+  font-size: 24rpx;
+}
+.purchaseInfo .purchaseDetail .price{
+  font-weight: 600;
+  color: #FF3939;
+  font-size: 24rpx;
+  margin-top: 4rpx;
+}
+.purchaseInfo .purchaseDetail .originalPrice{
+  padding-left: 8rpx;
+  font-weight: 500;
+  text-decoration:line-through ;
+}
+.purchaseInfo .purchaseMap{
+  width: 40%;
+  font-size: 28rpx;
+  color: #C2C2C2;
+}
+.shopMicon{
+  margin-left: 20rpx;
+}
+.shopMicon .map_icon{
+  width: 34rpx;
+  height:40rpx;
+  position: relative;
+  padding-right: 22rpx;
+}
+.shopMicon .map_icon::before{
+  content:"";
+  border-left: 2rpx solid #666;
+  display: inline-block;
+  height: 30rpx;
+  position: absolute;
+  right:0rpx;
+}
+.shopMicon .phone_icon{
+  width: 41rpx;
+  height: 41rpx;
+}
+.shopMicon text{
+  margin: 0 10rpx;
+}
+.instructions{
+  margin-top: 20rpx;
+  background: #333333;
+  padding: 0 20rpx;
+}
+.instructionsInfo{
+  padding:14rpx;
+  font-size: 28rpx;
+  color: #DBDBDB;
+}
+.merchant{
+  margin-top: 20rpx;
+  padding: 0 18rpx 40rpx 15rpx;
+  background: #333333;
+}
+.merchant .merchantDetail{
+  margin-top: 40rpx;
+}
+.merchant .merchantImg{
+  width: 710rpx;
+  height: 400rpx;
+  margin-bottom: 14rpx;
+}
+.merchant .merchantInfo{
+  font-size: 28rpx;
+  color: #DBDBDB;
+  /* font-weight: bold; */
+  margin-top: 18rpx;
+  line-height: 36rpx;
+}
+
+.footer{
+  display: -webkit-box;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  /* border-top: 1px solid #e8e8e8; */
+  height: 100rpx;
+  z-index: 10000;
+}
+.fbtm{
+  background-color: #EDAC10;
+  color: #333333;
+  border-radius: 0rpx;
+  width: 100%;
+  /* margin:28rpx auto; */
+  line-height: 100rpx;
+  display: block;
+  -webkit-box-flex: 1;
+}
+
+.label_icon1 {
+font-size:22rpx;
+border:1px solid #EDAC10;
+color:#EDAC10;
+border-radius:4rpx;
+margin-right:14rpx;
+padding:2rpx 4rpx;
+}
+
+
+/*美容没发 */
+#pink { width: 100%; background-color: #f6f6f6;height: 100%;}
+#pink .purchInfo{background: #FFFFFF;}
+#pink .purchInfo .h2{color: #333333;}
+#pink .shopMap .shopMtit{color: #A7A7A7;}
+#pink .purchLable .purchLsell{color: #FF5E71;}
+#pink .purchLable .purchLimg .label_icon05{border: 1px solid #FF5E71; }
+#pink .purchLable .purchLimg .label_icon06{border: 1px solid #FF5E71; }
+#pink .purchase {background: #fff;}
+#pink .shoptit{ border-bottom:1rpx solid #D8D8D8; padding:28rpx 0 28rpx 0; line-height: 22rpx;}
+#pink .shoptit .more{  display: inline-block}
+#pink .shoptit .more text{ font-size: 24rpx;color: #3598DB;}
+#pink .shoptit .more image{width: 9rpx; height: 16rpx; padding-left: 8rpx;}
+#pink .shoptit .h4{font-size: 32rpx; height: 25rpx; color: #4D4D4D;
+  position: relative; padding-left:20rpx; font-weight: 500;}
+#pink .h4::before{ content:""; border-left: 5rpx solid #B5A284; display: inline-block;
+  height: 25rpx; position: absolute; left:0;}
+#pink  .purchaseAll .h2{color: #4D4D4D;}
+#pink .instructionsInfo{color: #545454;}
+#pink .purchaseInfo .purchaseMap{color: #666666;}
+#pink .shopMicon .dark{display: none;}
+#pink .shopMicon .yellow{display: none;}
+#pink .instructions{background: #fff;}
+#pink .merchant{background: #fff;}
+#pink .merchant{color: #666;}
+#pink .merchant .merchantInfo{color: #666666;}
+#pink .fbtm {background: #FF5E71;color: #fff;}
+.labelInfopink .label_icon1 {
+border:1px solid #FF7F91;
+color:#FF7F91;}
+
+/*早教 */
+#yellow { width: 100%; background-color: #f6f6f6;height: 100%;}
+#yellow .purchInfo{background: #FFFFFF;}
+#yellow .purchInfo .h2{color: #333333;}
+#yellow .shopMap .shopMtit{color: #A7A7A7;}
+#yellow .purchLable .purchLsell{color: #FEBB45;}
+#yellow .purchLable .purchLimg .label_icon05{border: 1px solid #FF5E71; }
+#yellow .purchLable .purchLimg .label_icon06{border: 1px solid #FF5E71; }
+#yellow .purchase {background: #fff;}
+#yellow .shoptit{ border-bottom:1rpx solid #D8D8D8; padding:28rpx 0 28rpx 0; line-height: 22rpx;}
+#yellow .shoptit .more{  display: inline-block}
+#yellow .shoptit .more text{ font-size: 24rpx;color: #3598DB;}
+#yellow .shoptit .more image{width: 9rpx; height: 16rpx; padding-left: 8rpx;}
+#yellow .shoptit .h4{font-size: 32rpx; height: 25rpx; color: #4D4D4D;
+  position: relative; padding-left:20rpx; font-weight: 500;}
+#yellow .h4::before{ content:""; border-left: 5rpx solid #58D68D; display: inline-block;
+  height: 25rpx; position: absolute; left:0;}
+#yellow  .purchaseAll .h2{color: #4D4D4D;}
+#yellow .instructionsInfo{color: #545454;}
+#yellow .purchaseInfo .purchaseMap{color: #666666;}
+#yellow .shopMicon .dark{display: none;}
+#yellow .shopMicon .pink{display: none;}
+#yellow .instructions{background: #fff;}
+#yellow .merchant{background: #fff;}
+#yellow .merchant{color: #666;}
+#yellow .merchant .merchantInfo{color: #666666;}
+#yellow .fbtm {background: #F1C618;color: #fff;}
+.labelInfoyellow .label_icon1 {
+border:1px solid #F39C11;
+color:#F39C11;}
+
+/* 健身 */
+#dark { width: 100%; background-color: #242424;}
+#dark .shopMicon .yellow{display: none;}
+#dark .shopMicon .pink{display: none;}

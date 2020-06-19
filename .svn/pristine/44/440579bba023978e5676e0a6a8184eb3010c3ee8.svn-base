@@ -1,0 +1,115 @@
+<view class='coutitle flexbox flexcenter'>
+   <view class='flex {{act==1? "active":""}}' bindtap='typeChange' data-act="1">
+     <!--<text class='time {{isup? "up":"down"}}'>未过期</text>-->
+     <text class='time'>未过期</text>
+   </view>
+   <view class='flex pastDue {{act==2? "active":""}}' bindtap='typeChange' data-act="2">已过期</view>
+</view>
+
+<view class="prolist paddinglr {{nodata? 'hide':''}}">
+   <block wx:for="{{coulog}}" wx:key="coulogId">
+      <!--已过期-->
+      <view class='probtn' wx:if="{{state==1}}">
+          <view class='bblock'>
+              <image src='/images/coubg4.png' class='bimg'></image>
+              <view class=' flexbox flexcenter ccontnet'>
+                  <view class='flex'>
+                    <view class='pont ptitle past'>
+                      <view class='ponname' wx:if="{{coutype==0 && item.coutype==2}}">折扣券 </view>
+                      <view class='ponname' wx:if="{{coutype==0 && item.coutype==1}}">代金券 </view>
+                      <view class='ponname' wx:if="{{coutype==0 && item.coutype==4}}">兑换券 </view>
+                    </view>
+                    <view class="conText past" wx:if="{{coutype==0 && item.coutype==1}}">
+                        <text class='csmall' >￥</text>
+                        {{item.couamount}}
+                    </view>
+                    <view class="conText past" wx:if="{{coutype==0 && item.coutype==2}}">
+                        {{item.discountrate}}<text class='csmall'>折</text>
+                    </view>
+                    <view class="conText past" wx:if="{{coutype==0 && item.coutype==4}}">
+                        <text class='csmall'>{{item.giftname}}</text>
+                    </view>
+                 </view>
+                 <view class='cright past'>
+                    <text class='tname'>{{item.couname}}</text>
+                    <text class='pont pred'>{{item.cougetlimit}}</text>
+                    <image src="/images/state_past.png" class='pastimg'></image>
+                 </view>
+            </view>
+          </view>
+      </view>
+     <!--未过期-->
+      <view class='probtn' wx:else>
+          <!-- <view class='bblock'>
+              <!-- <image src='/images/couponBg.png' class='bimg'></image> -->
+             <!-- <view class=' flexbox flexcenter ccontnet'>
+                  <view class='flex'>
+                    <div class='pont ptitle'>
+                     <view class='ponname' wx:if="{{coutype==0 && item.coutype==2}}">
+                        <image src='/images/icon_zhe.png'></image>
+                      </view>
+                      <view class='ponname' wx:if="{{coutype==0 && item.coutype==1}}">
+                        <image src='/images/icon_dai.png'></image>
+                      </view>
+                      <view class='ponname' wx:if="{{coutype==0 && item.coutype==4}}">
+                        <image src='/images/icon_dui.png'></image>
+                      </view>
+                      <text class='tname' wx:if="{{coutype==0 && item.coutype==2}}">{{item.couname}}</text>
+                      <text class='tname tdui' wx:if="{{coutype==0 && item.coutype==1}}">{{item.couname}}</text>
+                      <text class='tname tzhe' wx:if="{{coutype==0 && item.coutype==4}}">{{item.couname}}</text>
+                      
+                    </div>
+                    <text class='pont pred'>{{item.cougetlimit}}</text>
+                    <text class='pont remark'>有效期：{{item.expirydate}}</text>
+                 </view>
+              <view class='cright'>
+               <button type="default" wx:if="{{coutype==0 && item.coutype==2}}" class='smallbtn gooduse' data-id="{{item.id}}" bindtap='toUse'>去使用 </button>
+                  <button type="default" wx:if="{{coutype==0 && item.coutype==4}}" class='smallbtn gooduse zhe' data-id="{{item.id}}" bindtap='toUse'>去使用</button>
+                  <button type="default" wx:if="{{coutype==0 && item.coutype==1}}" class='smallbtn gooduse dui' data-id="{{item.id}}" bindtap='toUse'>去使用</button>
+                
+              </view>
+            </view>
+          </view>
+      </view> -->
+
+      <view class='bblock'>
+              <image src='/images/coubg1.png' class='bimg' wx:if="{{coutype==0 && item.coutype==1}}"></image>
+              <image src='/images/coubg2.png' class='bimg' wx:if="{{coutype==0 && item.coutype==2}}"></image>
+              <image src='/images/coubg3.png' class='bimg' wx:if="{{coutype==0 && item.coutype==4}}"></image>
+              <view class='flexbox flexcenter ccontnet'>
+                  <view class='flex'>
+                    <view class='pont ptitle'>
+                      <view class='ponname' wx:if="{{coutype==0 && item.coutype==2}}">折扣券 </view>
+                      <view class='ponname' wx:if="{{coutype==0 && item.coutype==1}}">代金券 </view>
+                      <view class='ponname' wx:if="{{coutype==0 && item.coutype==4}}">兑换券 </view>
+                    </view>
+                    <view class="conText" wx:if="{{coutype==0 && item.coutype==1}}">
+                      <text class='csmall' >￥</text>
+                      {{item.couamount}}
+                    </view>
+                    <view class="conText czhe" wx:if="{{coutype==0 && item.coutype==2}}">
+                      {{item.discountrate}}<text class='csmall'>折</text>
+                    </view>
+                    <view class="conText cdui" wx:if="{{coutype==0 && item.coutype==4}}">
+                      <text class='csmall'>{{item.giftname}}</text>
+                    </view>
+                 </view>
+                  <view class='cright'>
+                    <text class='tname'>{{item.couname}}</text>
+                    <text class='pont pred'>{{item.cougetlimit}}</text>
+                    <button type="default" class='smallbtn gooduse' data-id="{{item.id}}" bindtap='toUse' wx:if="{{coutype==0 && item.coutype==1}}">去使用 </button>
+                    <button type="default" class='smallbtn gooduse zhe' data-id="{{item.id}}" bindtap='toUse' wx:if="{{coutype==0 && item.coutype==2}}">去使用 </button>
+                    <button type="default" class='smallbtn gooduse dui' data-id="{{item.id}}" bindtap='toUse' wx:if="{{coutype==0 && item.coutype==4}}">去使用 </button>
+                  </view>
+              </view>
+        </view>
+      </view>
+    </block>
+    <view class='dataOver {{ishide? "":"hide"}}'>{{statetip}}</view>
+</view>
+
+
+
+
+
+<image class="nodata {{nodata? '':'hide'}}" src="/images/noData.png"></image>

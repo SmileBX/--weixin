@@ -1,0 +1,218 @@
+/* pages/chooseTicket/chooseTicket.wxss */
+.header{
+  width:100%;
+  height: 99rpx;
+  text-align: center;
+  background: #333;
+}
+.li{
+  padding:26rpx 0;
+  border-bottom:1rpx solid #242424;
+  color:#C2C2C2;
+  font-size: 28rpx;
+  font-weight: bold;
+  /* border-right: 1px solid #dadada; */
+}
+
+.swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden; }
+.li:last-child{
+  border-right: none;
+}
+.active{
+  color: #fff;
+  font-weight: bold;
+  border-bottom: 1px solid #242424; 
+  width: 20rpx;
+}
+.chooseTicket{
+  padding:32rpx 20rpx 0 20rpx;
+  background: #333;
+  /* margin-bottom: 800rpx; */
+}
+.chooseInfo_img{
+  width: 652rpx;
+  height: 220rpx;
+}
+.chooseInfo{
+  position: relative;
+  margin-bottom: 20rpx;
+}
+.chooseDetails{
+  width: 72%;
+  position: absolute;
+  top: 28rpx;
+  left: 140rpx;
+}
+.tit{
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 14rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.time,.limit{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #999999;
+}
+.groupCou .wx-checkbox-input{
+  width:42rpx;
+  height: 42rpx;
+  border: 2rpx solid #999;
+  background: none;
+}
+.groupCou checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+   border-color: #F1C40F;
+}
+.groupCou checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+   width: 20rpx;
+   height: 20rpx;
+   line-height: 24rpx;
+   text-align: center;
+   font-size:18rpx;
+   color:#F1C40F;
+   background: none;
+   transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);
+}
+.discountCou checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+   border-color: #F1C40F;
+}
+.discountCou .wx-checkbox-input{
+  width:42rpx;
+  height: 42rpx;
+  border-radius: 50%;
+  border: 2rpx solid #999;
+  background: none;
+}
+.discountCou checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+  border-radius: 50%;
+   width: 20rpx;
+   height: 20rpx;
+   line-height: 24rpx;
+   text-align: center;
+   font-size:18rpx;
+   color:#F1C40F;
+   background-color: #F1C40F;
+   transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);
+}
+.discountCou radio{
+  background: none;
+}
+.discountCou radio .wx-radio-input{
+  width: 42rpx;
+  height: 42rpx;
+  border: 2rpx solid #999999;
+  border-radius: 50%;
+  background: none;
+}
+
+
+
+radio .wx-radio-input.wx-radio-input-checked{
+    background:none !important;
+    border: 2rpx solid #F1C40F !important;
+}
+
+.discountCou radio .wx-radio-input.wx-radio-input-checked{
+     border: 2rpx solid #F1C40F;
+ 
+}
+.discountCou radio .wx-radio-input.wx-radio-input-checked::before{
+   border-radius: 50%;
+   width: 20rpx;
+   height: 20rpx;
+   line-height: 24rpx;
+   text-align: center;
+   font-size:18rpx;
+   color:#F1C40F;
+   background-color: #F1C40F;
+   transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);
+}
+.footer{
+  padding: 40rpx 20rpx 30rpx 20rpx;
+  /* margin-top: 60rpx; */
+}
+.sumPrice{
+  border-radius: 10rpx;
+  width: 100%;
+  background:#FEBB45;
+  padding:25rpx 0;
+  text-align: center;
+  font-size:34rpx;
+  color:#333333;
+}
+.footpox{
+  /* height: 170rpx; */
+  position: fixed;
+  bottom: 0rpx;
+  width: 750rpx;
+  background:#242424;
+}
+#chooseTicket{
+  height: 170rpx;
+}
+
+/*美容没发 */
+#pink { width: 100%; background-color: #f6f6f6;height: 100%;}
+#pink .header {background: #fff;}
+#pink .chooseTicket{background: #fff;}
+#pink .li{border-bottom: 1px solid #DADADA;color: #666666;}
+#pink .active {border-bottom: 1px solid #FF5E71;color: #FF5E71;}
+#pink .footpox{background-color: #f6f6f6;}
+#pink .sumPrice {background: #FE465C;color: #fff;}
+#pink .groupCou checkbox .wx-checkbox-input.wx-checkbox-input-checked{ border-color: #FF5E71;}
+#pink .groupCou checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+   width: 20rpx; height: 20rpx; line-height: 24rpx; text-align: center;font-size:18rpx;
+   color:#FF5E71; background: none;transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);}
+#pink .discountCou checkbox .wx-checkbox-input.wx-checkbox-input-checked{  border-color: #FF5E71;}
+#pink .discountCou checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+  border-radius: 50%;  width: 20rpx; height: 20rpx; line-height: 24rpx;
+   text-align: center; font-size:18rpx; color:#FF5E71; background-color: #FF5E71;
+   transform:translate(-50%, -50%) scale(1); -webkit-transform:translate(-50%, -50%) scale(1);}
+#pink radio .wx-radio-input.wx-radio-input-checked{ background:none !important;
+    border: 2rpx solid #FF5E71 !important;}
+#pink .discountCou radio .wx-radio-input.wx-radio-input-checked{   border: 2rpx solid #FF5E71;}
+#pink .discountCou radio .wx-radio-input.wx-radio-input-checked::before{
+   border-radius: 50%; width: 20rpx; height: 20rpx; line-height: 24rpx;
+   text-align: center; font-size:18rpx; color:#FF5E71;
+   background-color: #FF5E71; transform:translate(-50%, -50%) scale(1);
+ -webkit-transform:translate(-50%, -50%) scale(1);}   
+   
+ /*美容没发 */
+#yellow { width: 100%; background-color: #f6f6f6;height: 100%;}
+#yellow .header {background: #fff;}
+#yellow .chooseTicket{background: #fff;}
+#yellow .li{border-bottom: 1px solid #DADADA;color: #666666;}
+#yellow .active {border-bottom: 1px solid #F1C40F;color: #F1C40F;}
+#yellow .footpox{background-color: #f6f6f6;}
+#yellow .sumPrice {background:#FEBB45;color: #fff;}
+#yellow .groupCou checkbox .wx-checkbox-input.wx-checkbox-input-checked{ border-color: #F1C40F;}
+#yellow .groupCou checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+   width: 20rpx; height: 20rpx; line-height: 24rpx; text-align: center;font-size:18rpx;
+   color:#F1C40F; background: none;transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);}
+#yellow .discountCou checkbox .wx-checkbox-input.wx-checkbox-input-checked{  border-color: #F1C40F;}
+#yellow .discountCou checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+  border-radius: 50%;  width: 20rpx; height: 20rpx; line-height: 24rpx;
+   text-align: center; font-size:18rpx; color:#F1C40F; background-color: #F1C40F;
+   transform:translate(-50%, -50%) scale(1); -webkit-transform:translate(-50%, -50%) scale(1);}
+#yellow radio .wx-radio-input.wx-radio-input-checked{ background:none !important;
+    border: 2rpx solid #F1C40F !important;}
+#yellow .discountCou radio .wx-radio-input.wx-radio-input-checked{   border: 2rpx solid #F1C40F;}
+#yellow .discountCou radio .wx-radio-input.wx-radio-input-checked::before{
+   border-radius: 50%; width: 20rpx; height: 20rpx; line-height: 24rpx;
+   text-align: center; font-size:18rpx; color:#F1C40F;
+   background-color: #F1C40F; transform:translate(-50%, -50%) scale(1);
+ -webkit-transform:translate(-50%, -50%) scale(1);}   
+
+  /*美容没发 */
+#dark { width: 100%; background-color: #242424;height: 100%;} 

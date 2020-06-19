@@ -1,0 +1,274 @@
+<view class='page' id='{{skinStyle}}'>
+  <view class='shopInfo'>
+    <view class='banner'>
+      <image src="/images/banner2.jpg" mode="aspectFill" wx:if="{{imgUrls.length==''}}" style='width:750rpx; height: 360rpx;' />
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-dots indicator-color='#D8D8D8' indicator-active-color='#ffffff' wx:else>
+        <block wx:for="{{imgUrls}}">
+          <swiper-item>
+            <image src="{{item}}" class="slide-image" mode="aspectFill" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class='shopDetail{{skinStyle}}'>
+      <view class='shopTitle flexbox flexcenter'>
+        <text class='flex'>{{getShopBasicInfo.shopname}}</text>
+        <navigator class='more' url="../../pages/map/map">
+          <image src='/images/more_icon.png' wx:if="{{getShopBasicInfo.ismajor==2}}"></image>
+        </navigator>
+      </view>
+      <view class='shopMap flexbox flexcenter'>
+        <text class='shopMtit flex' bindtap="getMap" data-lnglat='{{getShopBasicInfo.lng}},{{getShopBasicInfo.lat}}' data-sname='{{getShopBasicInfo.shopname}}' data-addr='{{getShopBasicInfo.address}}'>{{getShopBasicInfo.address}}</text>
+        <view class='shopMicon'>
+          <image src='/images/map_icon.png' class='map_icon dark' bindtap="getMap" data-lnglat='{{getShopBasicInfo.lng}},{{getShopBasicInfo.lat}}' data-sname='{{getShopBasicInfo.shopname}}' data-addr='{{getShopBasicInfo.address}}'></image>
+          <image src='/images/map_icon1.png' class='map_icon pink' bindtap="getMap" data-lnglat='{{getShopBasicInfo.lng}},{{getShopBasicInfo.lat}}' data-sname='{{getShopBasicInfo.shopname}}' data-addr='{{getShopBasicInfo.address}}'></image>
+          <image src='/images/map_icon2.png' class='map_icon yellow' bindtap="getMap" data-lnglat='{{getShopBasicInfo.lng}},{{getShopBasicInfo.lat}}' data-sname='{{getShopBasicInfo.shopname}}' data-addr='{{getShopBasicInfo.address}}'></image>
+          <text></text>
+          <image src='/images/phone_icon.png' class='phone_icon dark' data-tel="{{getShopBasicInfo.phone}}" bindtap='phonecallevent'></image>
+          <image src='/images/phone_icon1.png' class='phone_icon pink' data-tel="{{getShopBasicInfo.phone}}" bindtap='phonecallevent'></image>
+          <image src='/images/phone_icon2.png' class='phone_icon yellow' data-tel="{{getShopBasicInfo.phone}}" bindtap='phonecallevent'></image>
+        </view>
+      </view>
+
+<!-- 
+      <view class="sbtm flexbox flexcenter"  bindtap="getMap"  data-lnglat='{{item.lng}},{{item.lat}}' data-sname='{{item.shopname}}' data-addr='{{item.address}}'>
+              <text class='flex addr'>{{item.address}}df</text>
+          </view> -->
+
+
+      <view class='shopTime  flexbox flexcenter'>
+        <image src='/images/time_icon.png'></image>
+        <text wx:if="{{daytime.length==7}}">周一至周日</text>
+        <text wx:else>
+                <text wx:for="{{daytime}}">
+                  <text ><text wx:if="{{item==1}}">周一</text>
+        <text wx:if="{{item==2}}">周二</text>
+        <text wx:if="{{item==3}}">周三</text>
+        <text wx:if="{{item==4}}">周四</text>
+        <text wx:if="{{item==5}}">周五  </text>
+        <text wx:if="{{item==6}}">周六</text>
+        <text wx:if="{{item==7}}">周日</text></text>
+        </text>
+        </text>
+        <text class='flex'>{{getShopBasicInfo.businesshours}}</text>
+      </view>
+      <text class='labelInfo{{skinStyle}}' wx:for="{{servetype}}">
+      <!-- <image src='/images/label_icon01.png' class='label_icon01' ></image>
+      <image src='/images/label_icon02.png' class='label_icon02'></image>
+      <image src='/images/label_icon03.png' class='label_icon03'></image>
+      <image src='/images/label_icon04.png' class='label_icon04'></image> -->
+      <text class='label_icon1' wx:if="{{item==1}}">WIFI</text>
+      <text class='label_icon1' wx:if="{{item==2}}">微信支付</text>
+      <text class='label_icon1' wx:if="{{item==3}}">支付宝支付</text>
+      <text class='label_icon1' wx:if="{{item==4}}">上门服务</text>
+      <text class='label_icon1' wx:if="{{item==5}}">可预约</text>
+      <text class='label_icon1' wx:if="{{item==6}}">停车场</text>
+      <text class='label_icon1' wx:if="{{item==7}}">吸烟区</text>
+      <text class='label_icon1' wx:if="{{item==8}}">免费茶水</text>
+      <text class='label_icon1' wx:if="{{item==9}}">免费零食</text>
+      </text>
+    </view>
+  </view>
+  <!-- 领取会员卡 -->
+  <view class='getCard{{skinStyle}}' bindtap='tag' wx:if="{{getShopBasicInfo.unionAppid != null}}">
+  <view class='shoptit flexbox flexcenter'>
+    <text class='h4 flex'>领取会员卡</text>
+  </view>
+  <view class='getCinfo flexbox flexcenter'>
+    <view class='flex'><image class='getCimg ' src="{{getShopBasicInfo.cardnumpic}}"></image></view>
+    <view class='getCdetail '>
+      <text>{{getShopBasicInfo.cardnumname}}</text>
+      <!-- <navigator target = "miniProgram" app-id="wxc5b9d706d2b4f8e6" path="pages/index/index/" open-type='navigate'> -->
+      <button>领卡</button>
+      <!-- </navigator> -->
+    </view>
+  </view>
+</view>
+  <!-- 优惠买单 -->
+  <view class='discount{{skinStyle}}'>
+    <view class='flexbox flexcente'>
+      <view class='flex'>
+        <image src='/images/payTitle.png' class='dark'></image>
+        <image src='/images/payTitle1.png' class='pink'></image>
+        <image src='/images/payTitle2.png' class='yellow'></image>
+      </view>
+      <view bindtap='pay'>
+        <button>买单</button>
+      </view>
+    </view>
+  </view>
+  <!-- 团购项目 -->
+  <view class='purchase{{skinStyle}}'>
+    <view class='shoptit flexbox flexcenter'>
+      <text class='h4 flex'>团购项目</text>
+      <!-- <view class='more'> 
+        <text>查看全部</text>
+        <image src='/images/more_icon01.png'></image>
+      </view> -->
+      <navigator class='more' url="../../pages/couponList/couponList?coutype=5">
+        <text>查看全部</text>
+        <image src='/images/more_icon01.png' class='iconRight'></image>
+      </navigator>
+    </view>
+    <view class='purchaseInfo'>
+      <view class='purchaseAll flexbox flexcente' wx:for='{{purchase}}' wx:key='{{index}}' bindtap='goDetail' data-id='{{item.id}}'>
+        <view class=''>
+          <image src="{{item.coupic}}" class='purchaseImg' mode="aspectFill"></image>
+        </view>
+        <view class='purchaseDetail flex'>
+          <view class='purchaseTit'>{{item.couname}}</view>
+          <view class='purchasePep'>{{item.getnums}}人已购买</view>
+          <view class='price'>
+            <text class='discountPrice' wx:if="{{item.realamount!=null}}">￥{{item.realamount}}</text>
+            <text class='originalPrice' wx:if="{{item.couamount!=null}}">￥{{item.couamount}}</text>
+          </view>
+          <image src='/images/more_icon.png' class='right_grey_icon'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 商家优惠 -->
+  <view class='discounts'>
+    <view class='shoptit flexbox flexcenter'>
+      <text class='h4 flex'>商家优惠</text>
+      <navigator class='more' url="../../pages/couponList/couponList?coutype=0">
+        <text>查看全部</text>
+        <image src='/images/more_icon01.png' class='iconRight'></image>
+      </navigator>
+    </view>
+    <view class='discountsInfo'>
+      <view class="  {{nodata? 'hide':''}}">
+        <view class=''>
+          <block wx:for="{{conponLog}}" wx:key="conponLogId">
+            <!-- 代金券 -->
+            <view class='voucher' wx:if="{{item.coutype==1}}" data-id="{{item.id}}" bindtap='routerLink'>
+              <image class="voucher_background dark" src="/images/discounts_img01.png"></image>
+              <image class="voucher_background pink" src="/images/discounts_img011.png"></image>
+              <image class="voucher_background yellow" src="/images/discounts_img013.png"></image>
+              <view class='voucherPos'>
+                <view class='voucherInfo'>{{item.couname}}</view>
+                <view class='voucherState'>
+                  <text class='voucherPrice'>{{item.couamount}}元</text>
+                  <button wx:if="{{item.ishastiket==0}}" class='receive'>领取</button>
+                  <button class='AlreadyReceive' wx:else>已领取</button>
+                </view>
+              </view>
+            </view>
+            <!-- 折扣券 -->
+            <view class='discountInfo' wx:if="{{item.coutype==2}}" data-id="{{item.id}}" bindtap='routerLink'>
+              <image class="voucher_background dark" src="/images/discounts_img02.png"></image>
+              <image class="voucher_background pink" src="/images/discounts_img022.png"></image>
+              <image class="voucher_background yellow" src="/images/discounts_img023.png"></image>
+              <view class='discountPos'>
+                <view class='discountInfoss'>{{item.couname}}</view>
+                <view class='discountState'>
+                  <text class='discountPrice'>{{item.discountrate}}折</text>
+                  <button wx:if="{{true}}" class='receive'>领取</button>
+                  <button wx:else class='AlreadyReceive' data-type="0" bindtap='routerLink'>已领取</button>
+                </view>
+              </view>
+            </view>
+            <!-- 兑换券 -->
+            <view class='coupon' wx:if="{{item.coutype==4}}" data-id="{{item.id}}" bindtap='routerLink'>
+              <image class="voucher_background dark" src="/images/discounts_img03.png"></image>
+              <image class="voucher_background pink" src="/images/discounts_img031.png"></image>
+              <image class="voucher_background yellow" src="/images/discounts_img033.png"></image>
+              <view class='couponPos'>
+                <view class='couponInfo'>{{item.couname}}</view>
+                <view class='couponState'>
+                  <text class='couponPrice'>{{item.giftname}}</text>
+                  <button wx:if="{{true}}" class='receive'>领取</button>
+                  <button wx:else class='AlreadyReceive'>已领取</button>
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+        <view class='nodata {{nodata? "":"hide"}}'>没有更多数据了</view>
+      </view>
+    </view>
+  </view>
+  <!-- 产品服务 -->
+  <view class='serve'>
+    <view class='shoptit flexbox flexcenter'>
+      <text class='h4 flex'>产品服务</text>
+      <navigator class='more' url="../../pages/serve/serve">
+        <text>查看全部</text>
+        <image src='/images/more_icon01.png' class='iconRight'></image>
+      </navigator>
+    </view>
+    <view class='serveAll'>
+      <view wx:for="{{serveAll}}" wx:key="serveId" data-id="{{item.goodsid}}" bindtap='goodDetail' data-item="item" wx:for-index="idx">
+
+        <view wx:if="{{idx%2==0}}">
+          <view class="serveInfo">
+            <image class="serve_background" src="{{item.logos}}" mode="aspectFill"></image>
+            <view class='serveDetail'>
+              <view class='serveTit'>{{item.name}}</view>
+              <view class='servePrice'>
+                <text class='discountPrice' wx:if="{{item.prices!=null}}">￥{{item.prices}}</text>
+                <text wx:else></text>
+                <text class='originalPrice' wx:if="{{item.oldprice!=null}}">￥{{item.oldprice}}</text>
+                <text wx:else></text>
+              </view>
+              <view class='serveIntro'>{{item.goodsremark}}</view>
+            </view>
+          </view>
+        </view>
+
+        <view wx:else>
+          <view class='serveInfo'>
+            <image class="serve_background" src="{{item.logos}}" mode="aspectFill"></image>
+            <view class='serveDe'>
+              <view class='serveTit'>{{item.name}} </view>
+              <view class='servePrice'>
+                <text class='discountPrice' wx:if="{{item.prices!=null}}">￥{{item.prices}}</text>
+                <text class='originalPrice' wx:if="{{item.oldprice!=null}}">￥{{item.oldprice}}</text>
+              </view>
+              <view class='serveIntro'>{{item.goodsremark}}</view>
+            </view>
+          </view>
+        </view>
+
+
+
+      </view>
+    </view>
+  </view>
+
+
+  <!-- 商家介绍 -->
+  <view class='merchant'>
+    <view class='shoptit'>
+      <view class='flexbox flexcenter'>
+        <text class='h4 flex'>商家介绍</text>
+        <navigator class='more' url="../../pages/merchantsAlbum/merchantsAlbum">
+          <text>查看全部</text>
+          <image src='/images/more_icon01.png' class='iconRight'></image>
+        </navigator>
+      </view>
+      <!-- <view class='merchantInfo'>{{getShopBasicInfo.companyremark}}</view> -->
+    </view>
+    <!-- <view class='merchantDetail'>
+    <view class=''  wx:for='{{merchant}}' wx:key='{{index}}' bindtap='' data-id='{{item.id}}'>
+      <image class='merchantImg' src="{{item}}" mode="aspectFill"></image>
+    </view>
+  </view> -->
+
+    <view class='merchantDetail'>
+      <image src="" mode="aspectFill" wx:if="{{merchant.length==''}}" style='width:720rpx; height:0rpx;display:block;' />
+      <swiper display-multiple-items="1" next-margin="450rpx" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" wx:else>
+        <block wx:for="{{merchant}}" wx:key="storePicId">
+          <swiper-item class="img">
+            <image src="{{item}}" class="slide-image merchantImg" mode="aspectFill" bindtap="imgYu" data-list="{{merchant}}" data-src="{{item}}" />
+          </swiper-item>
+        </block>
+      </swiper>
+      
+    </view>
+
+    <view class='merchantInfo' wx:if="{{merchant.length==''}}" style='margin-top:0rpx;'>{{getShopBasicInfo.companyremark}}</view>
+      <view class='merchantInfo'  wx:else>{{getShopBasicInfo.companyremark}}</view>
+
+  </view>
+</view>

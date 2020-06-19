@@ -1,0 +1,92 @@
+button.btncon{
+  background:#f8a614;
+  color:#fff;
+  width: 80%
+}
+.tip{
+  text-align: center;
+  padding: 40rpx;
+  color:#ff3939;
+}
+.orange{
+  color:#febb45;
+}
+.secnum{
+  background: #333;
+  margin-bottom: 110rpx;
+}
+.phonewhite{
+  width: 60%;
+  margin-top:0;
+  padding-left: 156rpx;
+  border:none;
+  color: #C2C2C2;
+}
+.secbox{
+  position: relative;
+  height: 122rpx;
+}
+.secbox:first-child{
+  border-bottom: 1rpx solid #242424;
+}
+button.getcode{
+  position: absolute;
+  right: 0;
+  top:22rpx;
+  padding:0;
+  width:250rpx;
+  font-size:30rpx;
+  z-index: 100;
+  border:1rpx solid #EDAC10;
+  background:none;
+  border-radius: 18rpx;
+  color:#EDAC10;
+}
+.label{
+  position: absolute;
+  left:0 ;
+  top:35rpx;
+  color:#545454;
+  z-index: 1;
+  font-size: 34rpx;
+}
+button.btn-common{
+  margin-top:30rpx;
+  margin-bottom:20rpx;
+  width:100%;
+}
+button.btn-green{
+  background:#84d945;
+}
+.sumPrice{
+  border-radius: 10rpx;
+  width: 100%;
+  background:#FEBB45;
+  padding:25rpx 0;
+  text-align: center;
+  font-size:36rpx;
+  color:#333;
+}
+.footer{
+  padding: 0 20rpx;
+  margin-top: 50rpx;
+}
+
+/*美容没发 */
+#pink { width: 100%; background-color: #f6f6f6;height: 100%;}
+#pink .orange {color: #FF5E71;}
+#pink .secnum{background: #fff;}
+#pink  .getcode{border:1px solid #CFCFCF;color: #989CA2;}
+#pink .sumPrice{background: #FE465C;color: #fff;}
+#pink .secbox:first-child{border-bottom:1px solid #D8D8D8;}
+
+/*早教 */
+#yellow { width: 100%; background-color: #f6f6f6;height: 100%;}
+#yellow .orange {color: #FF5E71;}
+#yellow .secnum{background: #fff;}
+#yellow  .getcode{border:1px solid #CFCFCF;color: #989CA2;}
+#yellow .sumPrice{background: #FEBB45;color: #fff;}
+#yellow .secbox:first-child{border-bottom:1px solid #D8D8D8;}
+
+/*美容没发 */
+#dark { width: 100%; background-color: #242424;height: 100%;}

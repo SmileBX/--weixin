@@ -1,0 +1,88 @@
+/* pages/succeed/succeed.wxss */
+
+.pirce_succeed{
+  text-align: center;
+  font-size: 42rpx;
+  color: #EEEEEE;
+  padding-top:180rpx;
+}
+
+.pirce_succeed image{
+  width: 148rpx;
+  height: 182rpx;
+  margin-bottom: 40rpx;
+}
+
+.border_bot{
+ padding-bottom: 20rpx;
+}
+
+.projet{
+  text-align: center;
+  margin-top: 37rpx;
+}
+
+.projet_name{
+  color: #FEBB45;
+  font-size: 42rpx;
+  font-weight: bold;
+}
+
+.projet_name label{
+  color: #846839
+}
+
+.projet_time{
+  color: #666666;
+  font-size: 24rpx;
+  margin-top: 20rpx;
+}
+
+.projet_btn{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 80rpx;
+}
+
+.projet_btn view{
+  float: left;
+  font-size: 36rpx;
+  width: 250rpx;
+  height: 86rpx;
+  margin: 0 auto;
+  text-align: center;
+  /* border: 1px solid #536AA3; */
+  background: #FEBB45;
+  line-height: 86rpx;
+  border-radius:4px;
+  color: #333333
+}
+
+.projet_btn view:last-child{
+      border: 1px solid #FEBB45;
+      background: none;
+      color: #FEBB45
+}
+
+/*美容没发 */
+#pink { width: 100%; background-color: #fff;height: 100%;}
+#pink .pirce_succeed {color: #333333;}
+#pink .projet_name{color: #FE465C;}
+#pink  .projet_btn view {float:left;font-size:36rpx;width:250rpx;
+height:86rpx;margin:0 auto;text-align:center;background:#FE465C;line-height:86rpx;
+border-radius:4px;color:#fff;}
+#pink .projet_btn view:last-child {border:1px solid #FE465C;background:none;color:#FE465C;}
+
+/*早教 */
+#yellow { width: 100%; background-color: #fff;height: 100%;}
+#yellow .pirce_succeed {color: #333333;}
+#yellow .projet_name{color: #F1C40F;}
+#yellow  .projet_btn view {float:left;font-size:36rpx;width:250rpx;
+height:86rpx;margin:0 auto;text-align:center;background:#FEBB45;line-height:86rpx;
+border-radius:4px;color:#fff;}
+#yellow .projet_btn view:last-child {border:1px solid #FEBB45;background:none;color:#FEBB45;}
+
+/*健身 */
+#dark { width: 100%; background-color: #242424;height: 100%;}

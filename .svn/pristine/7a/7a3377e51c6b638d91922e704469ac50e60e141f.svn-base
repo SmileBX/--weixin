@@ -1,0 +1,133 @@
+<view class='page' id='{{skinStyle}}'>
+<scroll-view scroll-y="true" scroll-top="{{scrollTop}}"   bindscroll="scroll" style="height:100%" >
+<view class="paddinglr coudetail">
+   <view class="h4">{{couponInfo.couname}}</view>
+   <!-- <image class='qimg' src='{{couimg}}'></image> -->
+   <!--优惠券-->
+   <view class='coubox'>
+       <view class='coumu flexbox flexcenter'>
+          <view class='cmname daiBC' wx:if="{{couponInfo.coutype==1}}">
+                    <view class='cmImg'>
+                        <image src="/images/icon_coupon.svg"></image>
+                    </view>代金券
+          </view>
+          <view class='cmname zheBC' wx:if="{{couponInfo.coutype==2}}">
+                    <view class='cmImg'>
+                        <image src="/images/icon_coupon.svg"></image>
+                    </view>折扣券
+          </view>
+          <view class='cmname duiBC' wx:if="{{couponInfo.coutype==4}}">
+                    <view class='cmImg'>
+                        <image src="/images/icon_coupon.svg"></image>
+                    </view>兑换券
+          </view>
+          <view class='flex'>
+              <view class='cougetlimit'></view>
+              <view class='expirydate'>
+                <view class="expirydate_cont expirydate_contCdai" wx:if="{{couponInfo.coutype==1}}">
+                    {{couponInfo.couname}}
+                </view>
+                <view class="expirydate_cont expirydate_contCzhe" wx:if="{{couponInfo.coutype==2}}">
+                    {{couponInfo.couname}}
+                </view>
+                <view class="expirydate_cont expirydate_contCdui" wx:if="{{couponInfo.coutype==4}}">
+                    {{couponInfo.couname}}
+                </view>
+                <view class="expirydate_rule">
+                    <view>{{couponInfo.remark}}</view>
+                    <view class="expirydate_rule2">有效期{{couponInfo.effectdate}}~{{couponInfo.expirydate}}</view>
+                </view>
+              </view>
+          </view>
+      </view>
+   </view>
+   <!--优惠券//-->
+   <view class="coupon">
+      <div class="block-icon top-b">
+        <text class='icon'></text>
+        <text class='icon'></text>
+        <text class='icon'></text>
+        <text class='icon'></text>
+      </div>
+      <text class='h5' wx:if="{{couponInfo.coutype==1}}">{{couponInfo.couamount}}元代金券</text>
+      <text class='h5' wx:if="{{couponInfo.coutype==2}}">{{couponInfo.discountrate}}折折扣券</text>
+      <text class='h5' wx:if="{{couponInfo.coutype==4}}">{{couponInfo.giftname}}兑换券</text>
+      <text class='pgrey'>有效期：{{couponInfo.effectdate}}~{{couponInfo.expirydate}}</text>
+      <div class="block-icon bottom-b">
+        <text class='icon'></text>
+        <text class='icon'></text>
+        <text class='icon'></text>
+        <text class='icon'></text>
+      </div>
+  </view>
+  <!--
+  <view class='useBrm'>
+      <image class='hand' src="/images/left.png"></image>
+      <button class='makeBtn smallbtn cmBtn' bindtap='receive'>立即领用</button>
+      <image class='hand' src="/images/right.png"></image>
+  </view>
+  -->
+  <view class='messItem'>
+      <view class='title'>
+         <text class='h2'>商家信息</text>
+         <text class='line'></text>
+      </view>
+      <view class='conmess'>
+          <view class='melist flexbox flexcenter'>
+              <image class='imess' src='/images/1.png'></image>
+              <text class='mtext flex'>{{shopInfo.shopname}}</text>
+          </view>
+          <view class='melist flexbox flexcenter'>
+              <image class='imess' src='/images/2.png'></image>
+              <text class='mtext flex'>{{shopInfo.address}}</text>
+          </view>
+          <view class='melist flexbox flexcenter'>
+              <image class='imess' src='/images/3.png'></image>
+              <text class='mtext flex'>{{shopInfo.businesshours}}</text>
+          </view>
+          <view class='melist flexbox flexcenter'>
+              <image class='imess' src='/images/4.png'></image>
+              <text class='mtext flex'>{{shopInfo.phone}}</text>
+          </view>
+      </view>
+  </view>
+
+  <!-- <view class='messItem '>
+      <view class='title'>
+         <text class='h2'>使用须知</text>
+         <text class='line'></text>
+      </view>
+      <view class="messKown">
+        <image src="/images/quotes.png" class='desbg'></image>
+        <text class="destext">到店使用微信、支付宝扫一扫自助买单，满足该券使用条件自动抵扣相应金额。</text>
+      </view>
+  </view> -->
+
+  <view class='messItem'>
+      <view class='title'>
+         <text class='h2'>使用说明</text>
+         <text class='line'></text>
+      </view>
+      <view class="desitem2">
+         <text class="before-icon"></text>
+            <text class="p">{{couponInfo.cremark}}</text>
+            <text class="after-icon"></text>
+        </view>
+  </view>
+
+  <view class='messItem'>
+      <image src='/images/bottom_img.png' class='share'></image>
+  </view>
+</view>
+
+<view class='footer'>
+   <form name='pushMsgFm' report-submit="true" bindsubmit='receive'> 
+      <button class='fbtm'  form-type="submit">立即领取</button>
+   </form>
+</view>
+
+
+</scroll-view>
+
+</view>
+

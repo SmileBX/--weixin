@@ -1,0 +1,76 @@
+/* pages/serve/serve.wxss */
+page{
+  height: 100%;
+}
+.serveAll{
+  background: #333;
+  padding: 20rpx 20rpx 0 20rpx;
+}
+.serveAll .serveInfo{
+  position: relative;
+  margin-bottom: 24rpx;
+}
+.serveAll .serveInfo .serve_background{
+  width: 710rpx;
+  height: 340rpx; 
+}
+.serveAll .serveInfo .serveDetail{
+  position: absolute;
+  background: rgba(0,0,0,.5);
+  width: 280rpx;
+  height: 180rpx;
+  border-radius: 10rpx;
+  top: 50rpx;
+  right: 50rpx;
+  padding:30rpx 24rpx 30rpx 24rpx;
+}
+.serveAll .serveInfo .serveDe{
+  position: absolute;
+  background: rgba(0,0,0,.5);
+  width: 280rpx;
+  height: 180rpx;
+  border-radius: 10rpx;
+  top: 50rpx;
+  left: 50rpx;
+  padding:30rpx 24rpx 30rpx 24rpx;
+}
+.serveAll .serveTit{
+  font-size: 28rpx;
+  color: #fff;
+  font-weight: bold;
+}
+.discountPrice{
+  font-size: 28rpx;
+}
+.serveAll .servePrice{
+  font-size: 24rpx;
+  color: #FF3939;
+  font-weight: 700;
+}
+.serveAll .servePrice .originalPrice{
+  padding-left: 8rpx;
+  font-weight: 500;
+  text-decoration:line-through ;
+}
+.serveAll .serveIntro{
+  font-size: 24rpx;
+  color: #DBDBDB;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/*美容没发 */
+#pink { width: 100%; background-color: #f6f6f6;height: 100%;}
+#pink .serveAll{background-color: #f6f6f6;}
+
+/*美容没发 */
+#yellow { width: 100%; background-color: #f6f6f6;height: 100%;}
+#yellow .serveAll{background-color: #f6f6f6;}
+
+/*健身 */
+#dark { width: 100%; background-color: #333;height: 100%;}
+#dark .serveAll{background-color: #333;}

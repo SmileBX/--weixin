@@ -1,0 +1,349 @@
+page{
+  background:#333;
+}
+.h4{
+  padding:30rpx 0;
+  color: #fff;
+}
+.coudetail{
+  padding-bottom:100rpx;
+}
+.qimg{
+  width:100%;
+  height: 300rpx;
+  margin:20rpx 0
+}
+.coupon{
+  position: relative;
+  padding: 50rpx 0;
+  text-align: center;
+  border-top: 2rpx solid #84ccc9;
+  border-bottom: 2rpx solid #84ccc9;
+  margin-top:20rpx;
+}
+.block-icon{
+  width: 194rpx;
+  height: 16rpx;
+  text-align: center;
+  font-size: 0;
+  background-color: #333;
+  position: absolute;
+  top: -8rpx;
+  left:50%;
+  margin-left:-97rpx;
+}
+.bottom-b {
+  top:inherit;
+    bottom: -5px;
+}
+.icon{
+  display: inline-block;
+  width: 16rpx;
+  height: 16rpx;
+  background-color: #84ccc9;
+  transform: rotate(45deg);
+  margin:0 7rpx;
+}
+.h5{
+  font-size: 32rpx;
+  color: #FFFFFF;
+  display: block;
+  
+}
+.pgrey{
+  font-size: 28rpx;
+  color: #999;
+  display: block;
+}
+.useBrm{
+  text-align:center;
+  margin:30px 0;
+}
+.hand{
+  display: inline-block;
+  width: 57rpx;
+  height: 45rpx;
+  vertical-align: middle;
+}
+button.makeBtn{
+  background-color: #febb45;
+  padding:0 30rpx;
+  border-radius: 10rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size:30rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin:0 50rpx;
+}
+.messItem{
+  margin-top: 58rpx;
+}
+.title{
+  position: relative;
+  padding-bottom: 20rpx;
+  text-align: center;
+  border-bottom: 5rpx solid #fed16d;
+}
+.h2{
+  display: inline-block;
+  width: 182rpx;
+  height: 46rpx;
+  line-height: 46rpx;
+  text-align: center;
+  font-size: 36rpx;
+  color: #fff;
+  background-color: #fed16d;
+}
+.line{
+  position: absolute;
+  bottom: -4rpx;
+  left: 50%;
+  margin-left:-131rpx;
+  width: 262rpx;
+  height: 5rpx;
+  background-color: #80c269;
+}
+.conmess{
+  position: relative;
+  margin-top: 38rpx;
+  padding: 30rpx 20rpx;
+  border: 1rpx solid #84ccc9;
+}
+.melist{
+  line-height: 40rpx;
+  margin-bottom:10rpx;
+}
+.imess{
+  display: inline-block;
+  margin-right: 14rpx;
+  vertical-align: middle;
+  width: 38rpx;
+  height: 38rpx;
+}
+.mtext{
+  display: inline-block;
+  font-size:30rpx;
+ line-height: 30rpx;
+ color: #fff;
+
+}
+.messKown{
+   position: relative;
+    margin-top: 45rpx;
+    padding: 34rpx 19rpx;
+    font-size: 30rpx;
+    color: #80c269;
+   border: 2rpx dotted #84ccc9;
+}
+.desbg{
+    position: absolute;
+    top: -21rpx;
+    left: -2rpx;
+    width: 68rpx;
+    height: 45rpx;
+}
+.destext{
+  display: block;
+  padding:20rpx 0;
+}
+.desitem2{
+  position: relative;
+  margin-top: 28rpx;
+  padding: 30rpx 14rpx;
+  font-size: 24rpx;
+  color: #FFFFFF;
+  border: 1rpx solid #91ca7d;
+}
+.before-icon{
+  position: absolute;
+  top: -7rpx;
+  left: 245rpx;
+  width: 200rpx;
+  height: 14rpx;
+  line-height: 14rpx;
+  text-align: center;
+  background-color: #333;
+}
+.before-icon::after{
+  content: "";
+  display: inline-block;
+  width: 14rpx;
+  height: 14rpx;
+  border-radius: 50%;
+  background-color: #91ca7d;
+}
+.after-icon{
+  position: absolute;
+  bottom: -7rpx;
+  left: 56rpx;
+  width: 395rpx;
+  height: 14rpx;
+  line-height: 14rpx;
+  text-align: right;
+   background-color: #333;
+}
+.after-icon::after{
+  content: "";
+  display: inline-block;
+  width: 14rpx;
+  height: 14rpx;
+  border-radius: 50%;
+  background-color: #91ca7d;
+}
+.p{
+  display: block;
+  font-size:30rpx;
+  margin:3px 0
+}
+.share{
+  width: 100%;
+  height: 80rpx;
+  display: block;
+  margin-top: 60rpx;
+  margin-bottom: 80rpx;
+}
+.footer{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background-color: #febb45;
+}
+.topicon{
+  display: inline-block;
+  margin-top: 36rpx;
+  width: 0;
+  height: 0;
+  border-left: 20rpx solid transparent;
+  border-right: 20rpx solid transparent;
+  border-bottom: 30rpx solid #fff;
+}
+.coubox{
+  background:#242424;
+  margin:0 -30rpx;
+  padding:30rpx;
+
+}
+.coumu{
+    background-color:#fff;
+    margin:0 auto;
+    border-radius:20rpx;
+    height:230rpx;
+    overflow: hidden;
+}
+.cmname{
+    width:180rpx;
+    height: 100%;
+    text-align:center;
+    color:#fff;
+    margin-right:20rpx;
+    padding-top:70rpx;
+    font-size:26rpx;
+
+}
+.daiBC{
+  background-color:#febb45;
+}
+.zheBC{
+  background-color:#ff5e71;
+}
+.duiBC{
+  background-color:#45b8fb;
+}
+.cmImg{
+  width:120rpx;
+  height:120rpx;
+  margin:0 auto 6rpx;
+}
+.cmname image{
+    width:100%;
+    height:100%;
+}
+.expirydate{
+    padding:30rpx 0;
+    text-align:left;
+}
+.expirydate_cont{
+    
+    font-size:36rpx;
+}
+.expirydate_contCdai{
+  color:#febb45;
+}
+.expirydate_contCzhe{
+  color:#ff5e71;
+}
+.expirydate_contCdui{
+  color:#45b8fb;
+}
+.expirydate_rule{
+  color:#666;
+  font-size:28rpx;
+  margin-top:15rpx;
+}
+.expirydate_rule2{
+  font-size:24rpx;
+  color:#bdc0c5;
+}
+.footer_btn{
+    background-color:#febb45;
+    color:#fff;
+    position:fixed;
+    bottom:0;
+    width:100%;
+}
+.footer{
+  display: -webkit-box;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  border-top: 1px solid #242424;
+  height: 150rpx;
+  z-index: 10000;
+}
+.fbtm{
+  background-color: #febb45;
+  color: #333333;
+  border-radius: 50rpx;
+  width: 70%;
+  margin:28rpx auto;
+  line-height: 96rpx;
+  display: block;
+  -webkit-box-flex: 1;
+}
+form{
+  display: block;
+  width:100%;
+}
+
+/*美容没发 */
+#pink { width: 100%; background-color: #fff;height: 100%;}
+#pink .h4{color: #333;}
+#pink .coubox{background: #f6f6f6;}
+#pink  .block-icon{background: #fff;}
+#pink .h5{color: #09bed3;}
+#pink .messItem .title .h2{background: #FE465C;}
+#pink .mtext{color: #333;}
+#pink .before-icon{background: #fff;} 
+#pink .after-icon {background: #fff;}
+#pink .desitem2{color: #666;}
+#pink .footer{background: #fff;border:1rpx solid #D8D8D8;}
+#pink .fbtm{background: #FE465C;color: #fff;}
+
+/*早教 */
+#yellow { width: 100%; background-color: #fff;height: 100%;}
+#yellow .h4{color: #333;}
+#yellow .coubox{background: #f6f6f6;}
+#yellow  .block-icon{background: #fff;}
+#yellow .h5{color: #09bed3;}
+/* #pink .messItem .title .h2{background: #FE465C;} */
+#yellow .mtext{color: #333;}
+#yellow .before-icon{background: #fff;} 
+#yellow .after-icon {background: #fff;}
+#yellow .desitem2{color: #666;}
+#yellow .footer{background: #fff;border:1rpx solid #D8D8D8;}
+#yellow .fbtm{background: #FEBB45;color: #fff;}
